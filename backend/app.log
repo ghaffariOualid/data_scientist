@@ -1,0 +1,111 @@
+2025-11-29 11:32:54,872 - app.core.logging - INFO - Starting server on 0.0.0.0:8000
+2025-11-29 11:34:16,313 - app.core.logging - INFO - Uploading file: d2.csv
+2025-11-29 11:34:16,321 - app.core.logging - ERROR - Error uploading file: Error tokenizing data. C error: Expected 1 fields in line 405, saw 2
+
+2025-11-29 11:35:25,784 - app.core.logging - INFO - Starting server on 0.0.0.0:8000
+2025-11-29 11:36:25,673 - app.core.logging - INFO - Uploading file: aprising data translated 2015.csv
+2025-11-29 11:36:25,769 - app.core.logging - INFO - File uploaded successfully: 446 rows, 6 columns
+2025-11-29 11:36:43,990 - app.core.logging - ERROR - Error getting data info: 6 validation errors for DataInfo
+data_types.Zone
+  Input should be a valid string [type=string_type, input_value=dtype('O'), input_type=ObjectDType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+data_types.Location
+  Input should be a valid string [type=string_type, input_value=dtype('O'), input_type=ObjectDType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+data_types.Land price
+  Input should be a valid string [type=string_type, input_value=dtype('float64'), input_type=Float64DType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+data_types.Construction price
+  Input should be a valid string [type=string_type, input_value=dtype('float64'), input_type=Float64DType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+data_types.Type
+  Input should be a valid string [type=string_type, input_value=dtype('O'), input_type=ObjectDType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+data_types.Status
+  Input should be a valid string [type=string_type, input_value=dtype('O'), input_type=ObjectDType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2025-11-29 11:37:51,157 - app.core.logging - INFO - Starting server on 0.0.0.0:8000
+2025-11-29 11:38:32,436 - app.core.logging - INFO - Uploading file: holidays_events (1).csv
+2025-11-29 11:38:32,555 - app.core.logging - INFO - File uploaded successfully: 350 rows, 6 columns
+2025-11-29 11:39:19,039 - app.core.logging - INFO - Analyzing data with query: rapport
+2025-11-29 11:39:19,039 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-29 11:39:19,039 - scripts.custom_groq_llm - INFO - API Key set: gsk_meICwnWT5BXC456Y...
+2025-11-29 11:39:19,040 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_meICwnWT5BXC456Y...
+2025-11-29 11:39:19,069 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-29 11:40:15,298 - scripts.custom_groq_llm - WARNING - Rate limit exceeded. Retrying in 30 seconds...
+2025-11-29 11:40:45,892 - scripts.custom_groq_llm - WARNING - Rate limit exceeded. Retrying in 60 seconds...
+2025-11-29 11:41:47,329 - scripts.custom_groq_llm - WARNING - Rate limit exceeded. Retrying in 90 seconds...
+2025-11-29 11:43:20,322 - scripts.custom_groq_llm - WARNING - Rate limit exceeded. Retrying in 120 seconds...
+2025-11-29 11:45:20,914 - scripts.custom_groq_llm - ERROR - Groq API rate limit exceeded after 5 retries: {"error":{"message":"Request too large for model `llama-3.3-70b-versatile` in organization `org_01k8fv1nmbe49t4yqdybp6jw2q` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Requested 34952, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-29 11:45:20,914 - scripts.custom_groq_llm - ERROR - Error calling Groq API: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Request too large for model `llama-3.3-70b-versatile` in organization `org_01k8fv1nmbe49t4yqdybp6jw2q` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Requested 34952, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-29 11:45:21,749 - scripts.custom_groq_llm - WARNING - Rate limit exceeded. Retrying in 30 seconds...
+2025-11-29 11:45:52,534 - scripts.custom_groq_llm - WARNING - Rate limit exceeded. Retrying in 60 seconds...
+2025-11-29 11:46:53,409 - scripts.custom_groq_llm - WARNING - Rate limit exceeded. Retrying in 90 seconds...
+2025-11-29 11:48:24,418 - scripts.custom_groq_llm - WARNING - Rate limit exceeded. Retrying in 120 seconds...
+2025-11-29 11:49:18,021 - app.core.logging - INFO - Starting server on 0.0.0.0:8000
+2025-11-29 11:49:43,947 - app.core.logging - INFO - Uploading file: aprising data translated 2015.csv
+2025-11-29 11:49:44,013 - app.core.logging - INFO - File uploaded successfully: 446 rows, 6 columns
+2025-11-29 11:50:08,537 - app.core.logging - INFO - Analyzing data with query: rapport
+2025-11-29 11:50:08,537 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-29 11:50:08,538 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-29 11:50:08,538 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-29 11:50:08,577 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-29 11:50:14,666 - app.core.logging - INFO - Analysis completed successfully
+2025-11-29 11:58:20,664 - app.core.logging - INFO - Uploading file: d.csv
+2025-11-29 11:58:24,925 - app.core.logging - INFO - File uploaded successfully: 1000 rows, 7 columns
+2025-11-29 11:59:15,736 - app.core.logging - INFO - Analyzing data with query: rapport
+2025-11-29 11:59:15,740 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-29 11:59:15,740 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-29 11:59:15,743 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-29 11:59:21,736 - app.core.logging - INFO - Analysis completed successfully
+2025-11-29 12:06:11,506 - app.core.logging - INFO - Uploading file: d.csv
+2025-11-29 12:06:13,019 - app.core.logging - INFO - File uploaded successfully: 1000 rows, 7 columns
+2025-11-29 12:07:06,465 - app.core.logging - INFO - Analyzing data with query: create a chart
+2025-11-29 12:07:06,467 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-29 12:07:06,467 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:07:06,469 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:07:12,023 - app.core.logging - INFO - Analysis completed successfully
+2025-11-29 12:15:19,059 - app.core.logging - INFO - Uploading file: d.csv
+2025-11-29 12:15:20,221 - app.core.logging - INFO - File uploaded successfully: 1000 rows, 7 columns
+2025-11-29 12:15:42,123 - app.core.logging - INFO - Creating visualization with prompt: Crée un graphique en barres montrant la relation entre "Ville" (axe X) et "Nom Entreprise" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-29 12:15:42,232 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-29 12:15:42,233 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:15:42,233 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:15:47,347 - app.core.logging - INFO - Visualization created successfully
+2025-11-29 12:16:02,867 - app.core.logging - INFO - Creating visualization with prompt: Crée un graphique en barres montrant la relation entre "Ville" (axe X) et "Nom Entreprise" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-29 12:16:02,878 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-29 12:16:02,879 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:16:02,879 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:16:05,288 - app.core.logging - INFO - Visualization created successfully
+2025-11-29 12:18:03,827 - app.core.logging - INFO - Analyzing data with query: rapport detaille sur les entreprise la plus existe
+2025-11-29 12:18:03,828 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-29 12:18:03,831 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:18:03,833 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:18:21,730 - app.core.logging - INFO - Analysis completed successfully
+2025-11-29 12:25:28,379 - app.core.logging - INFO - Creating visualization with prompt: Crée un graphique circulaire montrant la relation entre "Nom Entreprise" (axe X) et "Effectif" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-29 12:25:28,452 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-29 12:25:28,460 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:25:28,460 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:25:29,818 - app.core.logging - ERROR - Error creating visualization: Could not convert value of 'x' ('Nom entreprise') into a numeric type. If 'x' contains stringified dates, please convert to a datetime column.
+2025-11-29 12:25:44,788 - app.core.logging - INFO - Creating visualization with prompt: Crée un graphique circulaire montrant la relation entre "Date Creation" (axe X) et "Nom Entreprise" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-29 12:25:44,803 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-29 12:25:44,805 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:25:44,805 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:25:45,876 - app.core.logging - ERROR - Error creating visualization: Column `Effectif` of `df` could not be converted to a numerical data type.
+2025-11-29 12:26:34,385 - app.core.logging - INFO - Creating visualization with prompt: Crée un graphique en barres montrant la relation entre "Ville" (axe X) et "Nom Entreprise" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-29 12:26:34,393 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-29 12:26:34,393 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:26:34,393 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:26:35,285 - app.core.logging - INFO - Visualization created successfully
+2025-11-29 12:26:57,741 - app.core.logging - INFO - Creating visualization with prompt: Crée un graphique en barres montrant la relation entre "Ville" (axe X) et "Effectif" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-29 12:26:57,755 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-29 12:26:57,755 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:26:57,756 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:26:58,759 - app.core.logging - INFO - Visualization created successfully
+2025-11-29 12:27:09,131 - app.core.logging - INFO - Creating visualization with prompt: Crée un graphique en barres montrant la relation entre "Ville" (axe X) et "Siren" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-29 12:27:09,146 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-29 12:27:09,147 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:27:09,147 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-29 12:27:09,979 - app.core.logging - INFO - Visualization created successfully

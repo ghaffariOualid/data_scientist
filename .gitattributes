@@ -1,0 +1,9 @@
+# Python / Environnement virtuel
+venv/
+.venv/
+__pycache__/
+
+# Fichiers de données et temporaires (selon votre projet)
+*.sqlite
+*.csv
+*.pdf

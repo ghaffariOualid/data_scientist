@@ -1,0 +1,21 @@
+streamlit
+pandas
+python-dotenv
+crewai
+langchain
+langchain-community
+statsmodels
+plotly
+requests
+# For workflow diagram and GIF creation
+pillow
+imageio
+matplotlib
+numpy
+# FastAPI dependencies
+fastapi
+uvicorn[standard]
+python-multipart
+# Additional dependencies for improved backend
+pydantic-settings
+sqlalchemy
