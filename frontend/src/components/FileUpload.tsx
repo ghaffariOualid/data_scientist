@@ -72,7 +72,7 @@ export const FileUpload = ({ onDataLoaded }: FileUploadProps) => {
   const onDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     setIsDragging(false);
-    
+
     const file = e.dataTransfer.files[0];
     if (file) handleFile(file);
   }, [handleFile]);
@@ -92,22 +92,35 @@ export const FileUpload = ({ onDataLoaded }: FileUploadProps) => {
   }, [handleFile]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[70vh] px-4 animate-fade-in">
-      <div className="text-center mb-8 space-y-3">
-        <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-          Analyse IA de Données
-        </h1>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Explorez vos données avec l'intelligence artificielle. Téléchargez un fichier CSV et laissez notre agent IA vous guider.
+    <div className="flex flex-col items-center justify-center min-h-[80vh] px-4 animate-fade-in relative z-10">
+      {/* Decorative floating elements */}
+      <div className="absolute top-20 left-[10%] w-20 h-20 bg-primary/10 rounded-2xl rotate-12 backdrop-blur-sm border border-white/10 animate-float hidden lg:block" />
+      <div className="absolute bottom-20 right-[10%] w-16 h-16 bg-accent/10 rounded-full backdrop-blur-sm border border-white/10 animate-float-delayed hidden lg:block" />
+
+      <div className="text-center mb-12 space-y-6 max-w-3xl">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4 animate-fade-in-up">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          Nouvelle version disponible
+        </div>
+
+        <h2 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/50 tracking-tight animate-fade-in-up delay-100">
+          Analysez vos données <br />
+          <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">en quelques secondes</span>
+        </h2>
+
+        <p className="text-muted-foreground text-xl max-w-2xl mx-auto animate-fade-in-up delay-200 leading-relaxed">
+          Transformez vos fichiers CSV en insights exploitables grâce à notre intelligence artificielle avancée. Visualisations, rapports et analyses en temps réel.
         </p>
       </div>
 
-      <Card 
-        className={`relative w-full max-w-2xl p-12 transition-all duration-300 ${
-          isDragging 
-            ? "border-primary border-2 shadow-2xl scale-[1.02] bg-primary/5" 
-            : "border-dashed border-2 hover:border-primary/50 hover:shadow-lg"
-        }`}
+      <Card
+        className={`relative w-full max-w-xl p-12 transition-all duration-500 backdrop-blur-2xl bg-background/60 border-white/10 shadow-2xl ${isDragging
+            ? "border-primary/50 scale-[1.02] bg-primary/5 ring-4 ring-primary/10"
+            : "hover:border-primary/30 hover:shadow-[0_0_40px_-10px_rgba(124,58,237,0.2)] hover:-translate-y-1"
+          }`}
         onDrop={onDrop}
         onDragOver={onDragOver}
         onDragLeave={onDragLeave}
@@ -120,14 +133,13 @@ export const FileUpload = ({ onDataLoaded }: FileUploadProps) => {
           id="file-upload"
           disabled={isLoading}
         />
-        
-        <label 
-          htmlFor="file-upload" 
+
+        <label
+          htmlFor="file-upload"
           className="flex flex-col items-center justify-center cursor-pointer space-y-6"
         >
-          <div className={`rounded-full p-6 bg-primary/10 transition-all duration-300 ${
-            isDragging ? "animate-pulse-glow" : ""
-          }`}>
+          <div className={`rounded-full p-6 bg-primary/10 transition-all duration-300 ${isDragging ? "animate-pulse-glow" : ""
+            }`}>
             {fileName ? (
               <CheckCircle2 className="w-16 h-16 text-primary" />
             ) : (
@@ -182,7 +194,7 @@ export const FileUpload = ({ onDataLoaded }: FileUploadProps) => {
           </div>
 
           {!fileName && (
-            <Button 
+            <Button
               type="button"
               size="lg"
               className="mt-4"
@@ -217,6 +229,6 @@ export const FileUpload = ({ onDataLoaded }: FileUploadProps) => {
           <span>Agent IA intégré</span>
         </div>
       </div>
-    </div>
+    </div >
   );
 };

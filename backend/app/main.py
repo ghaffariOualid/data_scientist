@@ -1,4 +1,5 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from .config import settings
 from .database import engine, Base
@@ -28,6 +29,15 @@ app.add_middleware(
 # Inclure les routers
 app.include_router(data_router)
 app.include_router(analysis_router)
+
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    logger.error(f"Global exception: {str(exc)}", exc_info=True)
+    return JSONResponse(
+        status_code=500,
+        content={"detail": "Une erreur interne est survenue. Veuillez réessayer plus tard."},
+    )
 
 
 @app.get("/")

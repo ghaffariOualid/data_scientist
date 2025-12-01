@@ -1,5 +1,13 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
+
+
+class AnalysisRequest(BaseModel):
+    query: str = Field(..., min_length=3, max_length=1000, description="The user's question about the data")
+
+
+class VisualizationRequest(BaseModel):
+    prompt: str = Field(..., min_length=3, max_length=500, description="Description of the desired visualization")
 
 
 class DataInfo(BaseModel):

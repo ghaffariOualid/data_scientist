@@ -75,13 +75,13 @@ export class ApiService {
   }
 
   static async analyzeData(query: string): Promise<ApiResponse<AnalysisResponse>> {
-    const formData = new FormData();
-    formData.append('query', query);
-
     try {
       const response = await fetch(buildApiUrl(API_CONFIG.ENDPOINTS.ANALYZE), {
         method: 'POST',
-        body: formData,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ query }),
       });
 
       if (!response.ok) {
@@ -97,13 +97,13 @@ export class ApiService {
   }
 
   static async createVisualization(prompt: string): Promise<ApiResponse<VisualizationResponse>> {
-    const formData = new FormData();
-    formData.append('prompt', prompt);
-
     try {
       const response = await fetch(buildApiUrl(API_CONFIG.ENDPOINTS.VISUALIZE), {
         method: 'POST',
-        body: formData,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt }),
       });
 
       if (!response.ok) {

@@ -109,3 +109,1132 @@ data_types.Status
 2025-11-29 12:27:09,147 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
 2025-11-29 12:27:09,147 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
 2025-11-29 12:27:09,979 - app.core.logging - INFO - Visualization created successfully
+2025-11-30 15:42:34,028 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 15:42:34,495 - app.core.logging - INFO - Starting server on 0.0.0.0:8000
+2025-11-30 16:07:04,466 - app.core.logging - INFO - Uploading file: siren.csv
+2025-11-30 16:07:04,878 - app.core.logging - INFO - File uploaded successfully: 500 rows, 7 columns
+2025-11-30 16:07:27,417 - app.core.logging - INFO - Validated query: rapport
+2025-11-30 16:07:27,425 - app.core.logging - INFO - Analyzing data with validated query: rapport
+2025-11-30 16:07:27,425 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns
+2025-11-30 16:07:27,434 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:07:27,445 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:07:27,445 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:07:27,445 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:07:27,575 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 16:07:27,668 - scripts.custom_groq_llm - INFO - [a8857d24] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4026, Temperature: None
+2025-11-30 16:07:29,942 - scripts.custom_groq_llm - INFO - [a8857d24] Groq API success - Duration: 2.27s, Response length: 2991, Attempts: 1
+2025-11-30 16:07:29,942 - scripts.custom_groq_llm - INFO - [a8857d24] Token usage - Prompt: 873, Completion: 805, Total: 1678
+2025-11-30 16:07:29,991 - scripts.custom_groq_llm - INFO - [b6272b03] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4587, Temperature: None
+2025-11-30 16:07:34,017 - scripts.custom_groq_llm - INFO - [b6272b03] Groq API success - Duration: 4.03s, Response length: 5571, Attempts: 1
+2025-11-30 16:07:34,017 - scripts.custom_groq_llm - INFO - [b6272b03] Token usage - Prompt: 982, Completion: 1099, Total: 2081
+2025-11-30 16:07:34,074 - scripts.custom_groq_llm - INFO - [3250f515] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 9390, Temperature: None
+2025-11-30 16:07:35,724 - scripts.custom_groq_llm - INFO - [3250f515] Groq API success - Duration: 1.65s, Response length: 2877, Attempts: 1
+2025-11-30 16:07:35,724 - scripts.custom_groq_llm - INFO - [3250f515] Token usage - Prompt: 1896, Completion: 517, Total: 2413
+2025-11-30 16:07:35,765 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 16:07:35,765 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:07:35,774 - app.core.logging - INFO - Analysis result validation - Score: 0.00, Valid: False
+2025-11-30 16:07:35,774 - app.core.logging - WARNING - Analysis result failed validation: ['Content may not fully address the query']
+2025-11-30 16:07:35,774 - app.core.logging - ERROR - Analysis result quality too low, rejecting
+2025-11-30 16:08:07,952 - app.core.logging - INFO - Validated query: rapport
+2025-11-30 16:08:07,970 - app.core.logging - INFO - Analyzing data with validated query: rapport
+2025-11-30 16:08:07,970 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns
+2025-11-30 16:08:07,970 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:08:07,989 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:08:07,989 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:08:07,990 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:08:08,044 - scripts.custom_groq_llm - INFO - [aedfd95f] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4026, Temperature: None
+2025-11-30 16:08:10,078 - scripts.custom_groq_llm - INFO - [aedfd95f] Groq API success - Duration: 2.03s, Response length: 2630, Attempts: 1
+2025-11-30 16:08:10,086 - scripts.custom_groq_llm - INFO - [aedfd95f] Token usage - Prompt: 873, Completion: 612, Total: 1485
+2025-11-30 16:08:10,138 - scripts.custom_groq_llm - INFO - [d85e8c2b] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4631, Temperature: None
+2025-11-30 16:08:13,195 - scripts.custom_groq_llm - INFO - [d85e8c2b] Groq API success - Duration: 3.06s, Response length: 4112, Attempts: 1
+2025-11-30 16:08:13,195 - scripts.custom_groq_llm - INFO - [d85e8c2b] Token usage - Prompt: 949, Completion: 815, Total: 1764
+2025-11-30 16:08:13,263 - scripts.custom_groq_llm - INFO - [dd553d57] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 7914, Temperature: None
+2025-11-30 16:08:15,252 - scripts.custom_groq_llm - INFO - [dd553d57] Groq API success - Duration: 1.99s, Response length: 3333, Attempts: 1
+2025-11-30 16:08:15,262 - scripts.custom_groq_llm - INFO - [dd553d57] Token usage - Prompt: 1614, Completion: 626, Total: 2240
+2025-11-30 16:08:15,320 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 16:08:15,328 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:08:15,328 - app.core.logging - INFO - Analysis result validation - Score: 0.90, Valid: True
+2025-11-30 16:08:15,335 - app.core.logging - INFO - Analysis completed successfully
+2025-11-30 16:08:15,343 - app.core.cache - INFO - Cached result for key: 838c4181... (TTL: 3600s)
+2025-11-30 16:10:01,192 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique linéaire montrant la relation entre "Ville" (axe X) et "Nom" (axe Y). Utilise les ...
+2025-11-30 16:10:01,243 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique linéaire montrant la relation entre "Ville" (axe X) et "Nom" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 16:10:01,243 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 16:10:01,243 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:10:01,251 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:10:01,252 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:10:01,252 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:10:01,319 - scripts.custom_groq_llm - INFO - [750c02f2] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5865, Temperature: None
+2025-11-30 16:10:02,528 - scripts.custom_groq_llm - INFO - [750c02f2] Groq API success - Duration: 1.21s, Response length: 1298, Attempts: 1
+2025-11-30 16:10:02,528 - scripts.custom_groq_llm - INFO - [750c02f2] Token usage - Prompt: 1334, Completion: 461, Total: 1795
+2025-11-30 16:10:02,568 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 16:10:02,568 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:10:02,576 - app.core.logging - INFO - Visualization code validation - Score: 0.70, Valid: True
+2025-11-30 16:10:02,584 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 16:10:34,658 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique linéaire montrant la relation entre "Ville" (axe X) et "Code Postal" (axe Y). Util...
+2025-11-30 16:10:34,668 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique linéaire montrant la relation entre "Ville" (axe X) et "Code Postal" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 16:10:34,669 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 16:10:34,672 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:10:34,673 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:10:34,674 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:10:34,675 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:10:34,726 - scripts.custom_groq_llm - INFO - [ea8bee32] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5873, Temperature: None
+2025-11-30 16:10:36,026 - scripts.custom_groq_llm - INFO - [ea8bee32] Groq API success - Duration: 1.30s, Response length: 1267, Attempts: 1
+2025-11-30 16:10:36,027 - scripts.custom_groq_llm - INFO - [ea8bee32] Token usage - Prompt: 1335, Completion: 338, Total: 1673
+2025-11-30 16:10:36,067 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 16:10:36,070 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:10:36,075 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 16:10:36,107 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 16:10:43,463 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique linéaire montrant la relation entre "Ville" (axe X) et "Date Creation" (axe Y). Ut...
+2025-11-30 16:10:43,471 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique linéaire montrant la relation entre "Ville" (axe X) et "Date Creation" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 16:10:43,472 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 16:10:43,472 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:10:43,473 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:10:43,473 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:10:43,474 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:10:43,522 - scripts.custom_groq_llm - INFO - [ac12450a] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5875, Temperature: None
+2025-11-30 16:10:45,082 - scripts.custom_groq_llm - INFO - [ac12450a] Groq API success - Duration: 1.56s, Response length: 2130, Attempts: 1
+2025-11-30 16:10:45,083 - scripts.custom_groq_llm - INFO - [ac12450a] Token usage - Prompt: 1335, Completion: 463, Total: 1798
+2025-11-30 16:10:45,126 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 16:10:45,132 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:10:45,138 - app.core.logging - INFO - Visualization code validation - Score: 0.90, Valid: True
+2025-11-30 16:10:45,139 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 16:10:52,583 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique linéaire montrant la relation entre "Ville" (axe X) et "Siren" (axe Y). Utilise le...
+2025-11-30 16:10:52,588 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique linéaire montrant la relation entre "Ville" (axe X) et "Siren" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 16:10:52,589 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 16:10:52,589 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:10:52,590 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:10:52,590 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:10:52,590 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:10:52,627 - scripts.custom_groq_llm - INFO - [ef50bbeb] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5867, Temperature: None
+2025-11-30 16:10:54,004 - scripts.custom_groq_llm - INFO - [ef50bbeb] Groq API success - Duration: 1.38s, Response length: 1475, Attempts: 1
+2025-11-30 16:10:54,005 - scripts.custom_groq_llm - INFO - [ef50bbeb] Token usage - Prompt: 1335, Completion: 505, Total: 1840
+2025-11-30 16:10:54,047 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 16:10:54,054 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:10:54,062 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 16:10:54,064 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 16:15:43,859 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 16:15:44,537 - app.core.logging - INFO - Starting server on 0.0.0.0:8000
+2025-11-30 16:15:55,532 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique linéaire montrant la relation entre "Ville" (axe X) et "Siren" (axe Y). Utilise le...
+2025-11-30 16:15:55,575 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 16:15:55,582 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique linéaire montrant la relation entre "Ville" (axe X) et "Siren" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 16:15:55,582 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 16:15:55,582 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:15:55,582 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:15:55,582 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:15:55,582 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:15:55,615 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 16:15:55,665 - scripts.custom_groq_llm - INFO - [54851543] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5867, Temperature: None
+2025-11-30 16:15:56,575 - scripts.custom_groq_llm - INFO - [54851543] Groq API success - Duration: 0.91s, Response length: 694, Attempts: 1
+2025-11-30 16:15:56,575 - scripts.custom_groq_llm - INFO - [54851543] Token usage - Prompt: 1335, Completion: 203, Total: 1538
+2025-11-30 16:15:56,602 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 16:15:56,608 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:15:56,608 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 16:15:56,612 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 16:16:25,480 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique linéaire montrant la relation entre "Ville" (axe X) et "Siren" (axe Y). Utilise le...
+2025-11-30 16:16:25,488 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 16:16:25,489 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique linéaire montrant la relation entre "Ville" (axe X) et "Siren" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 16:16:25,490 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 16:16:25,490 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:16:25,490 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:16:25,491 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:16:25,492 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:16:25,526 - scripts.custom_groq_llm - INFO - [08acdaee] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5867, Temperature: None
+2025-11-30 16:16:26,977 - scripts.custom_groq_llm - INFO - [08acdaee] Groq API success - Duration: 1.45s, Response length: 1381, Attempts: 1
+2025-11-30 16:16:26,996 - scripts.custom_groq_llm - INFO - [08acdaee] Token usage - Prompt: 1335, Completion: 362, Total: 1697
+2025-11-30 16:16:27,043 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 16:16:27,045 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:16:27,052 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 16:16:27,054 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 16:16:49,062 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique linéaire montrant la relation entre "Date Creation" (axe X) et "Siren" (axe Y). Ut...
+2025-11-30 16:16:49,117 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 16:16:49,121 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique linéaire montrant la relation entre "Date Creation" (axe X) et "Siren" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 16:16:49,125 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 16:16:49,142 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:16:49,142 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:16:49,162 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:16:49,176 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:16:49,367 - scripts.custom_groq_llm - INFO - [b1d42f6d] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5875, Temperature: None
+2025-11-30 16:16:50,167 - scripts.custom_groq_llm - INFO - [b1d42f6d] Groq API success - Duration: 0.80s, Response length: 793, Attempts: 1
+2025-11-30 16:16:50,167 - scripts.custom_groq_llm - INFO - [b1d42f6d] Token usage - Prompt: 1335, Completion: 183, Total: 1518
+2025-11-30 16:16:50,944 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 16:16:50,948 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:16:50,949 - app.core.logging - INFO - Visualization code validation - Score: 1.00, Valid: True
+2025-11-30 16:16:50,955 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 16:32:22,957 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 16:32:25,243 - app.core.logging - INFO - Starting server on 0.0.0.0:8000
+2025-11-30 16:47:48,443 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique linéaire montrant la relation entre "Date Creation" (axe X) et "Siren" (axe Y). Ut...
+2025-11-30 16:47:48,772 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 16:47:48,793 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique linéaire montrant la relation entre "Date Creation" (axe X) et "Siren" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 16:47:48,794 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 16:47:48,797 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:47:48,804 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:47:48,804 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:47:48,805 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:47:49,116 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 16:47:49,278 - scripts.custom_groq_llm - INFO - [8401cf33] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5875, Temperature: None
+2025-11-30 16:47:50,061 - scripts.custom_groq_llm - INFO - [8401cf33] Groq API success - Duration: 0.78s, Response length: 609, Attempts: 1
+2025-11-30 16:47:50,061 - scripts.custom_groq_llm - INFO - [8401cf33] Token usage - Prompt: 1335, Completion: 153, Total: 1488
+2025-11-30 16:47:50,096 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 16:47:50,102 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:47:50,106 - app.core.logging - INFO - Visualization code validation - Score: 1.00, Valid: True
+2025-11-30 16:47:50,109 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 16:48:34,678 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique linéaire montrant la relation entre "Date Creation" (axe X) et "Siren" (axe Y). Ut...
+2025-11-30 16:48:34,697 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 16:48:34,700 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique linéaire montrant la relation entre "Date Creation" (axe X) et "Siren" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 16:48:34,702 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 16:48:34,711 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:48:34,716 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:48:34,717 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:48:34,718 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:48:34,768 - scripts.custom_groq_llm - INFO - [7eab158e] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5875, Temperature: None
+2025-11-30 16:48:36,042 - scripts.custom_groq_llm - INFO - [7eab158e] Groq API success - Duration: 1.27s, Response length: 1434, Attempts: 1
+2025-11-30 16:48:36,043 - scripts.custom_groq_llm - INFO - [7eab158e] Token usage - Prompt: 1335, Completion: 334, Total: 1669
+2025-11-30 16:48:36,069 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 16:48:36,076 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:48:36,077 - app.core.logging - INFO - Visualization code validation - Score: 0.70, Valid: True
+2025-11-30 16:48:36,081 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 16:48:56,336 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 16:52:21,364 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 16:52:48,425 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 16:54:11,953 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 16:54:14,100 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 16:54:40,102 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 16:54:40,403 - app.core.logging - INFO - Starting server on 0.0.0.0:8000
+2025-11-30 16:54:53,658 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique linéaire montrant la relation entre "Date Creation" (axe X) et "Siren" (axe Y). Ut...
+2025-11-30 16:54:53,669 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 16:54:53,670 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique linéaire montrant la relation entre "Date Creation" (axe X) et "Siren" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 16:54:53,672 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 16:54:53,673 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:54:53,673 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:54:53,674 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:54:53,674 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:54:53,710 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 16:54:53,758 - scripts.custom_groq_llm - INFO - [2145eee2] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5875, Temperature: None
+2025-11-30 16:54:54,607 - scripts.custom_groq_llm - INFO - [2145eee2] Groq API success - Duration: 0.85s, Response length: 682, Attempts: 1
+2025-11-30 16:54:54,609 - scripts.custom_groq_llm - INFO - [2145eee2] Token usage - Prompt: 1335, Completion: 170, Total: 1505
+2025-11-30 16:54:54,658 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 16:54:54,660 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:54:54,665 - app.core.logging - INFO - Visualization code validation - Score: 1.00, Valid: True
+2025-11-30 16:54:54,667 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 16:55:19,865 - app.core.logging - INFO - Uploading file: siren.csv
+2025-11-30 16:55:20,166 - app.core.logging - INFO - File uploaded successfully: 500 rows, 7 columns
+2025-11-30 16:55:32,769 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique en barres montrant la relation entre "Effectif" (axe X) et "Ville" (axe Y). Utilis...
+2025-11-30 16:55:32,785 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 16:55:32,785 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique en barres montrant la relation entre "Effectif" (axe X) et "Ville" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 16:55:32,785 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 16:55:32,785 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:55:32,793 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:55:32,794 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:55:32,794 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:55:32,836 - scripts.custom_groq_llm - INFO - [3a854d16] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5871, Temperature: None
+2025-11-30 16:55:33,944 - scripts.custom_groq_llm - INFO - [3a854d16] Groq API success - Duration: 1.11s, Response length: 1082, Attempts: 1
+2025-11-30 16:55:33,944 - scripts.custom_groq_llm - INFO - [3a854d16] Token usage - Prompt: 1335, Completion: 279, Total: 1614
+2025-11-30 16:55:33,985 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 16:55:33,993 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:55:33,997 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 16:55:33,998 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 16:56:16,798 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique en barres montrant la relation entre "Effectif" (axe X) et "Ville" (axe Y). Utilis...
+2025-11-30 16:56:16,806 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 16:56:16,806 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique en barres montrant la relation entre "Effectif" (axe X) et "Ville" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 16:56:16,806 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 16:56:16,806 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 16:56:16,806 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 16:56:16,806 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:56:16,806 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 16:56:16,847 - scripts.custom_groq_llm - INFO - [ca9ffad7] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5871, Temperature: None
+2025-11-30 16:56:17,881 - scripts.custom_groq_llm - INFO - [ca9ffad7] Groq API success - Duration: 1.03s, Response length: 957, Attempts: 1
+2025-11-30 16:56:17,881 - scripts.custom_groq_llm - INFO - [ca9ffad7] Token usage - Prompt: 1335, Completion: 263, Total: 1598
+2025-11-30 16:56:17,930 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 16:56:17,939 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 16:56:17,939 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 16:56:17,939 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 17:01:48,570 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique en barres montrant la relation entre "Effectif" (axe X) et "Ville" (axe Y). Utilis...
+2025-11-30 17:01:48,587 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 17:01:48,651 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique en barres montrant la relation entre "Effectif" (axe X) et "Ville" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 17:01:48,652 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 17:01:48,659 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:01:48,667 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:01:48,672 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:01:48,675 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:01:49,080 - scripts.custom_groq_llm - INFO - [1a070426] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5871, Temperature: None
+2025-11-30 17:01:51,945 - scripts.custom_groq_llm - INFO - [1a070426] Groq API success - Duration: 2.88s, Response length: 1006, Attempts: 1
+2025-11-30 17:01:51,945 - scripts.custom_groq_llm - INFO - [1a070426] Token usage - Prompt: 1335, Completion: 268, Total: 1603
+2025-11-30 17:01:52,011 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 17:01:52,036 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:01:52,045 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 17:01:52,070 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 17:02:41,664 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 17:02:43,305 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 17:03:08,398 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 17:03:08,688 - app.core.logging - INFO - Starting server on 0.0.0.0:8000
+2025-11-30 17:03:27,820 - app.core.logging - INFO - Uploading file: siren.csv
+2025-11-30 17:03:28,153 - app.core.logging - INFO - File uploaded successfully: 500 rows, 7 columns
+2025-11-30 17:03:56,641 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique en barres montrant la relation entre "Date Creation" (axe X) et "Effectif" (axe Y)...
+2025-11-30 17:03:56,660 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 17:03:56,674 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique en barres montrant la relation entre "Date Creation" (axe X) et "Effectif" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 17:03:56,676 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 17:03:56,677 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:03:56,677 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:03:56,678 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:03:56,683 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:03:56,724 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 17:03:56,768 - scripts.custom_groq_llm - INFO - [4d483936] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5879, Temperature: None
+2025-11-30 17:03:57,966 - scripts.custom_groq_llm - INFO - [4d483936] Groq API success - Duration: 1.20s, Response length: 1158, Attempts: 1
+2025-11-30 17:03:57,966 - scripts.custom_groq_llm - INFO - [4d483936] Token usage - Prompt: 1335, Completion: 283, Total: 1618
+2025-11-30 17:03:58,033 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 17:03:58,059 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:03:58,059 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 17:03:58,066 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 17:04:06,068 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique en barres montrant la relation entre "Date Creation" (axe X) et "Effectif" (axe Y)...
+2025-11-30 17:04:06,077 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 17:04:06,086 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique en barres montrant la relation entre "Date Creation" (axe X) et "Effectif" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 17:04:06,086 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 17:04:06,086 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:04:06,086 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:04:06,104 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:04:06,104 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:04:06,152 - scripts.custom_groq_llm - INFO - [147af8e9] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 5879, Temperature: None
+2025-11-30 17:04:07,151 - scripts.custom_groq_llm - INFO - [147af8e9] Groq API success - Duration: 1.00s, Response length: 991, Attempts: 1
+2025-11-30 17:04:07,172 - scripts.custom_groq_llm - INFO - [147af8e9] Token usage - Prompt: 1335, Completion: 251, Total: 1586
+2025-11-30 17:04:07,351 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 17:04:07,385 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:04:07,392 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 17:04:07,394 - app.core.logging - ERROR - Error executing visualization code: __import__ not found
+2025-11-30 17:07:05,417 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 17:07:07,141 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 17:07:39,551 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 17:07:39,869 - app.core.logging - INFO - Starting server on 0.0.0.0:8000
+2025-11-30 17:07:44,683 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique en barres montrant la relation entre "Date Creation" (axe X) et "Effectif" (axe Y)...
+2025-11-30 17:07:44,697 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 17:07:44,698 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique en barres montrant la relation entre "Date Creation" (axe X) et "Effectif" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 17:07:44,698 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 17:07:44,699 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:07:44,699 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:07:44,700 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:07:44,700 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:07:44,744 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 17:07:44,784 - scripts.custom_groq_llm - INFO - [1f26fb1a] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 6057, Temperature: None
+2025-11-30 17:07:45,766 - scripts.custom_groq_llm - INFO - [1f26fb1a] Groq API success - Duration: 0.98s, Response length: 893, Attempts: 1
+2025-11-30 17:07:45,768 - scripts.custom_groq_llm - INFO - [1f26fb1a] Token usage - Prompt: 1376, Completion: 231, Total: 1607
+2025-11-30 17:07:45,830 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 17:07:45,833 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:07:45,840 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 17:07:46,783 - app.core.logging - INFO - Visualization created successfully
+2025-11-30 17:07:57,894 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique en barres montrant la relation entre "Date Creation" (axe X) et "Effectif" (axe Y)...
+2025-11-30 17:07:57,912 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 17:07:57,912 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique en barres montrant la relation entre "Date Creation" (axe X) et "Effectif" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 17:07:57,918 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 17:07:57,922 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:07:57,922 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:07:57,922 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:07:57,926 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:07:57,969 - scripts.custom_groq_llm - INFO - [f61fa80b] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 6057, Temperature: None
+2025-11-30 17:07:59,004 - scripts.custom_groq_llm - INFO - [f61fa80b] Groq API success - Duration: 1.03s, Response length: 1034, Attempts: 1
+2025-11-30 17:07:59,005 - scripts.custom_groq_llm - INFO - [f61fa80b] Token usage - Prompt: 1376, Completion: 256, Total: 1632
+2025-11-30 17:07:59,080 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 17:07:59,096 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:07:59,101 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 17:07:59,426 - app.core.logging - INFO - Visualization created successfully
+2025-11-30 17:08:59,510 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique linéaire montrant la relation entre "Siren" (axe X) et "Code Postal" (axe Y). Util...
+2025-11-30 17:08:59,518 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 17:08:59,518 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique linéaire montrant la relation entre "Siren" (axe X) et "Code Postal" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 17:08:59,518 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 17:08:59,518 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:08:59,518 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:08:59,518 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:08:59,518 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:08:59,561 - scripts.custom_groq_llm - INFO - [61cbeea5] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 6051, Temperature: None
+2025-11-30 17:09:01,184 - scripts.custom_groq_llm - INFO - [61cbeea5] Groq API success - Duration: 1.62s, Response length: 1658, Attempts: 1
+2025-11-30 17:09:01,201 - scripts.custom_groq_llm - INFO - [61cbeea5] Token usage - Prompt: 1376, Completion: 385, Total: 1761
+2025-11-30 17:09:01,348 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 17:09:01,368 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:09:01,389 - app.core.logging - INFO - Visualization code validation - Score: 0.70, Valid: True
+2025-11-30 17:09:01,693 - app.core.logging - INFO - Visualization created successfully
+2025-11-30 17:09:30,302 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique linéaire montrant la relation entre "Code Postal" (axe X) et "Siren" (axe Y). Util...
+2025-11-30 17:09:30,319 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 17:09:30,319 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique linéaire montrant la relation entre "Code Postal" (axe X) et "Siren" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 17:09:30,319 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 17:09:30,319 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:09:30,327 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:09:30,327 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:09:30,327 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:09:30,368 - scripts.custom_groq_llm - INFO - [9b2b96f4] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 6051, Temperature: None
+2025-11-30 17:09:31,702 - scripts.custom_groq_llm - INFO - [9b2b96f4] Groq API success - Duration: 1.33s, Response length: 1565, Attempts: 1
+2025-11-30 17:09:31,702 - scripts.custom_groq_llm - INFO - [9b2b96f4] Token usage - Prompt: 1376, Completion: 335, Total: 1711
+2025-11-30 17:09:31,743 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 17:09:31,743 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:09:31,751 - app.core.logging - INFO - Visualization code validation - Score: 1.00, Valid: True
+2025-11-30 17:09:31,793 - app.core.logging - INFO - Visualization created successfully
+2025-11-30 17:10:16,046 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique circulaire montrant la relation entre "Nom" (axe X) et "Code Postal" (axe Y). Util...
+2025-11-30 17:10:16,061 - app.core.logging - INFO - Successfully retrieved data from database: 500 rows, 7 columns
+2025-11-30 17:10:16,062 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique circulaire montrant la relation entre "Nom" (axe X) et "Code Postal" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 17:10:16,062 - app.core.logging - INFO - Dataset info: 500 rows, 7 columns, numeric columns: ['Siren', 'Code postal']
+2025-11-30 17:10:16,062 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:10:16,062 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:10:16,062 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:10:16,062 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:10:16,112 - scripts.custom_groq_llm - INFO - [cf357d2c] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 6051, Temperature: None
+2025-11-30 17:10:16,996 - scripts.custom_groq_llm - INFO - [cf357d2c] Groq API success - Duration: 0.88s, Response length: 723, Attempts: 1
+2025-11-30 17:10:16,996 - scripts.custom_groq_llm - INFO - [cf357d2c] Token usage - Prompt: 1374, Completion: 188, Total: 1562
+2025-11-30 17:10:17,028 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 17:10:17,036 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:10:17,036 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 17:10:17,128 - app.core.logging - INFO - Visualization created successfully
+2025-11-30 17:12:18,247 - app.core.logging - INFO - Uploading file: car_prices.csv
+2025-11-30 17:12:47,750 - app.core.logging - INFO - File uploaded successfully: 558837 rows, 16 columns
+2025-11-30 17:12:47,984 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique en barres montrant la relation entre "model" (axe X) et "odometer" (axe Y). Utilis...
+2025-11-30 17:12:54,991 - app.core.logging - INFO - Successfully retrieved data from database: 558837 rows, 16 columns
+2025-11-30 17:12:54,999 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique en barres montrant la relation entre "model" (axe X) et "odometer" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 17:12:54,999 - app.core.logging - INFO - Dataset info: 558837 rows, 16 columns, numeric columns: ['Year', 'Condition', 'Odometer', 'Mmr', 'Sellingprice']
+2025-11-30 17:12:54,999 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:12:54,999 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:12:54,999 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:12:54,999 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:12:55,049 - scripts.custom_groq_llm - INFO - [b9f03da0] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 6823, Temperature: None
+2025-11-30 17:12:55,836 - scripts.custom_groq_llm - INFO - [b9f03da0] Groq API success - Duration: 0.79s, Response length: 489, Attempts: 1
+2025-11-30 17:12:55,836 - scripts.custom_groq_llm - INFO - [b9f03da0] Token usage - Prompt: 1680, Completion: 134, Total: 1814
+2025-11-30 17:12:55,873 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 17:12:55,881 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:12:55,881 - app.core.logging - INFO - Visualization code validation - Score: 0.80, Valid: True
+2025-11-30 17:12:56,422 - app.core.logging - INFO - Visualization created successfully
+2025-11-30 17:14:03,480 - app.core.logging - INFO - Validated visualization prompt: Crée un graphique circulaire montrant la relation entre "make" (axe X) et "vin" (axe Y). Utilise les...
+2025-11-30 17:14:08,895 - app.core.logging - INFO - Successfully retrieved data from database: 558837 rows, 16 columns
+2025-11-30 17:14:08,911 - app.core.logging - INFO - Creating visualization with validated prompt: Crée un graphique circulaire montrant la relation entre "make" (axe X) et "vin" (axe Y). Utilise les données disponibles dans la base de données.
+2025-11-30 17:14:08,911 - app.core.logging - INFO - Dataset info: 558837 rows, 16 columns, numeric columns: ['Year', 'Condition', 'Odometer', 'Mmr', 'Sellingprice']
+2025-11-30 17:14:08,911 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:14:08,911 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:14:08,911 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:14:08,911 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:14:08,953 - scripts.custom_groq_llm - INFO - [660be4b4] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 6818, Temperature: None
+2025-11-30 17:14:10,896 - scripts.custom_groq_llm - INFO - [660be4b4] Groq API success - Duration: 1.94s, Response length: 1626, Attempts: 1
+2025-11-30 17:14:10,896 - scripts.custom_groq_llm - INFO - [660be4b4] Token usage - Prompt: 1678, Completion: 372, Total: 2050
+2025-11-30 17:14:10,928 - scripts.crew - INFO - Visualization crew executed successfully
+2025-11-30 17:14:10,937 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:14:10,937 - app.core.logging - INFO - Visualization code validation - Score: 1.00, Valid: True
+2025-11-30 17:14:11,094 - app.core.logging - INFO - Visualization created successfully
+2025-11-30 17:15:35,901 - app.core.logging - INFO - Validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:15:41,342 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:15:41,350 - app.core.logging - INFO - Dataset info: 558837 rows, 16 columns
+2025-11-30 17:15:41,350 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:15:41,350 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:15:41,350 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:15:41,350 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:15:41,442 - scripts.custom_groq_llm - INFO - [ca93a56d] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4071, Temperature: None
+2025-11-30 17:15:43,776 - scripts.custom_groq_llm - INFO - [ca93a56d] Groq API success - Duration: 2.33s, Response length: 3894, Attempts: 1
+2025-11-30 17:15:43,776 - scripts.custom_groq_llm - INFO - [ca93a56d] Token usage - Prompt: 883, Completion: 938, Total: 1821
+2025-11-30 17:15:43,817 - scripts.custom_groq_llm - INFO - [be2d584f] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4761, Temperature: None
+2025-11-30 17:15:46,876 - scripts.custom_groq_llm - INFO - [be2d584f] Groq API success - Duration: 3.06s, Response length: 4971, Attempts: 1
+2025-11-30 17:15:46,876 - scripts.custom_groq_llm - INFO - [be2d584f] Token usage - Prompt: 999, Completion: 1105, Total: 2104
+2025-11-30 17:15:46,926 - scripts.custom_groq_llm - INFO - [04d9742b] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8839, Temperature: None
+2025-11-30 17:15:48,575 - scripts.custom_groq_llm - INFO - [04d9742b] Groq API success - Duration: 1.65s, Response length: 2620, Attempts: 1
+2025-11-30 17:15:48,575 - scripts.custom_groq_llm - INFO - [04d9742b] Token usage - Prompt: 1935, Completion: 544, Total: 2479
+2025-11-30 17:15:48,616 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 17:15:48,616 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:15:48,616 - app.core.logging - INFO - Analysis result validation - Score: 0.09, Valid: False
+2025-11-30 17:15:48,616 - app.core.logging - WARNING - Analysis result failed validation: ['Content may not fully address the query']
+2025-11-30 17:15:48,624 - app.core.logging - ERROR - Analysis result quality too low, rejecting
+2025-11-30 17:16:01,141 - app.core.logging - INFO - Validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:16:06,954 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:16:06,954 - app.core.logging - INFO - Dataset info: 558837 rows, 16 columns
+2025-11-30 17:16:06,954 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:16:06,954 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:16:06,954 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:16:06,954 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:16:06,995 - scripts.custom_groq_llm - INFO - [3b7cdcd6] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4071, Temperature: None
+2025-11-30 17:16:09,546 - scripts.custom_groq_llm - INFO - [3b7cdcd6] Groq API success - Duration: 2.55s, Response length: 3756, Attempts: 1
+2025-11-30 17:16:09,546 - scripts.custom_groq_llm - INFO - [3b7cdcd6] Token usage - Prompt: 883, Completion: 1025, Total: 1908
+2025-11-30 17:16:09,595 - scripts.custom_groq_llm - INFO - [4ee5350e] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4549, Temperature: None
+2025-11-30 17:16:12,512 - scripts.custom_groq_llm - INFO - [4ee5350e] Groq API success - Duration: 2.92s, Response length: 4378, Attempts: 1
+2025-11-30 17:16:12,512 - scripts.custom_groq_llm - INFO - [4ee5350e] Token usage - Prompt: 946, Completion: 898, Total: 1844
+2025-11-30 17:16:12,553 - scripts.custom_groq_llm - INFO - [81545660] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8216, Temperature: None
+2025-11-30 17:16:14,395 - scripts.custom_groq_llm - INFO - [81545660] Groq API success - Duration: 1.84s, Response length: 3056, Attempts: 1
+2025-11-30 17:16:14,395 - scripts.custom_groq_llm - INFO - [81545660] Token usage - Prompt: 1691, Completion: 613, Total: 2304
+2025-11-30 17:16:14,436 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 17:16:14,436 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:16:14,444 - app.core.logging - INFO - Analysis result validation - Score: 0.11, Valid: False
+2025-11-30 17:16:14,444 - app.core.logging - WARNING - Analysis result failed validation: ['Content may not fully address the query']
+2025-11-30 17:16:14,444 - app.core.logging - ERROR - Analysis result quality too low, rejecting
+2025-11-30 17:17:54,371 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 17:17:55,912 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 17:20:26,613 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 17:20:28,575 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 17:20:28,933 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:20:28,933 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:20:28,933 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:20:28,933 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:20:28,967 - scripts.custom_groq_llm - INFO - [eb3a5734] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4036, Temperature: None
+2025-11-30 17:20:31,244 - scripts.custom_groq_llm - INFO - [eb3a5734] Groq API success - Duration: 2.28s, Response length: 3479, Attempts: 1
+2025-11-30 17:20:31,245 - scripts.custom_groq_llm - INFO - [eb3a5734] Token usage - Prompt: 876, Completion: 852, Total: 1728
+2025-11-30 17:20:31,285 - scripts.custom_groq_llm - INFO - [27ea987a] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4647, Temperature: None
+2025-11-30 17:20:34,605 - scripts.custom_groq_llm - INFO - [27ea987a] Groq API success - Duration: 3.32s, Response length: 3749, Attempts: 1
+2025-11-30 17:20:34,606 - scripts.custom_groq_llm - INFO - [27ea987a] Token usage - Prompt: 973, Completion: 852, Total: 1825
+2025-11-30 17:20:34,646 - scripts.custom_groq_llm - INFO - [9ce18276] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 7565, Temperature: None
+2025-11-30 17:20:36,523 - scripts.custom_groq_llm - INFO - [9ce18276] Groq API success - Duration: 1.88s, Response length: 2864, Attempts: 1
+2025-11-30 17:20:36,523 - scripts.custom_groq_llm - INFO - [9ce18276] Token usage - Prompt: 1651, Completion: 577, Total: 2228
+2025-11-30 17:20:36,550 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 17:20:36,551 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:22:29,022 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 17:22:29,319 - app.core.logging - INFO - Starting server on 0.0.0.0:8000
+2025-11-30 17:22:36,830 - app.core.logging - INFO - Validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:22:45,816 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:22:45,817 - app.core.logging - INFO - Dataset info: 558837 rows, 16 columns
+2025-11-30 17:22:45,830 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:22:45,834 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:22:45,846 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:22:45,847 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:22:45,951 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 17:22:46,065 - scripts.custom_groq_llm - INFO - [51858b64] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4071, Temperature: None
+2025-11-30 17:23:01,367 - crewai.events.listeners.tracing.trace_batch_manager - WARNING - Error initializing trace batch: ('Connection aborted.', ConnectionAbortedError(10053, 'Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte', None, 10053, None)). Continuing without tracing.
+2025-11-30 17:23:01,369 - scripts.custom_groq_llm - ERROR - [51858b64] Request error (attempt 1) - Duration: 15.30s, Error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-30 17:23:01,853 - crewai.telemetry.telemetry - ERROR - HTTPSConnectionPool(host='telemetry.crewai.com', port=4319): Max retries exceeded with url: /v1/traces (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001ABAB6AC5D0>: Failed to resolve 'telemetry.crewai.com' ([Errno 11001] getaddrinfo failed)"))
+2025-11-30 17:23:33,950 - scripts.custom_groq_llm - INFO - [51858b64] Groq API success - Duration: 47.88s, Response length: 3034, Attempts: 2
+2025-11-30 17:23:33,952 - scripts.custom_groq_llm - INFO - [51858b64] Token usage - Prompt: 883, Completion: 739, Total: 1622
+2025-11-30 17:23:33,998 - scripts.custom_groq_llm - INFO - [ef147e7f] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4293, Temperature: None
+2025-11-30 17:23:36,545 - scripts.custom_groq_llm - INFO - [ef147e7f] Groq API success - Duration: 2.55s, Response length: 3709, Attempts: 1
+2025-11-30 17:23:36,547 - scripts.custom_groq_llm - INFO - [ef147e7f] Token usage - Prompt: 874, Completion: 790, Total: 1664
+2025-11-30 17:23:36,602 - scripts.custom_groq_llm - INFO - [cd856f33] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 7552, Temperature: None
+2025-11-30 17:23:38,808 - scripts.custom_groq_llm - INFO - [cd856f33] Groq API success - Duration: 2.21s, Response length: 3236, Attempts: 1
+2025-11-30 17:23:38,809 - scripts.custom_groq_llm - INFO - [cd856f33] Token usage - Prompt: 1591, Completion: 646, Total: 2237
+2025-11-30 17:23:38,850 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 17:23:38,862 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:23:38,865 - app.core.logging - INFO - Analysis result validation - Score: 0.11, Valid: False
+2025-11-30 17:23:38,876 - app.core.logging - WARNING - Analysis result failed validation: ['Content may not fully address the query']
+2025-11-30 17:23:38,877 - app.core.logging - ERROR - Analysis result quality too low, rejecting
+2025-11-30 17:24:34,887 - app.core.logging - INFO - Validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:24:45,585 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:24:45,599 - app.core.logging - INFO - Dataset info: 558837 rows, 16 columns
+2025-11-30 17:24:45,669 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:24:45,675 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:24:45,676 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:24:45,678 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:24:46,031 - scripts.custom_groq_llm - INFO - [3fa71ea1] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4071, Temperature: None
+2025-11-30 17:24:49,132 - scripts.custom_groq_llm - INFO - [3fa71ea1] Groq API success - Duration: 3.10s, Response length: 2677, Attempts: 1
+2025-11-30 17:24:49,136 - scripts.custom_groq_llm - INFO - [3fa71ea1] Token usage - Prompt: 883, Completion: 672, Total: 1555
+2025-11-30 17:24:49,210 - scripts.custom_groq_llm - INFO - [2ed1904d] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4459, Temperature: None
+2025-11-30 17:24:53,785 - scripts.custom_groq_llm - INFO - [2ed1904d] Groq API success - Duration: 4.57s, Response length: 4277, Attempts: 1
+2025-11-30 17:24:53,791 - scripts.custom_groq_llm - INFO - [2ed1904d] Token usage - Prompt: 916, Completion: 879, Total: 1795
+2025-11-30 17:24:53,882 - scripts.custom_groq_llm - INFO - [1a66c0de] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8109, Temperature: None
+2025-11-30 17:24:56,549 - scripts.custom_groq_llm - INFO - [1a66c0de] Groq API success - Duration: 2.67s, Response length: 3726, Attempts: 1
+2025-11-30 17:24:56,550 - scripts.custom_groq_llm - INFO - [1a66c0de] Token usage - Prompt: 1674, Completion: 735, Total: 2409
+2025-11-30 17:24:56,590 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 17:24:56,600 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:24:56,603 - app.core.logging - INFO - Analysis result validation - Score: 0.10, Valid: False
+2025-11-30 17:24:56,614 - app.core.logging - WARNING - Analysis result failed validation: ['Content may not fully address the query']
+2025-11-30 17:24:56,618 - app.core.logging - ERROR - Analysis result quality too low, rejecting
+2025-11-30 17:25:46,247 - app.core.logging - INFO - Uploading file: car_prices_cleaned.csv
+2025-11-30 17:26:15,488 - app.core.logging - INFO - File uploaded successfully: 534410 rows, 17 columns
+2025-11-30 17:26:35,098 - app.core.logging - INFO - Validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:26:42,257 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:26:42,257 - app.core.logging - INFO - Dataset info: 534410 rows, 17 columns
+2025-11-30 17:26:42,263 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:26:42,263 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:26:42,263 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:26:42,264 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:26:42,346 - scripts.custom_groq_llm - INFO - [4f43a2bd] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4071, Temperature: None
+2025-11-30 17:26:46,397 - scripts.custom_groq_llm - INFO - [4f43a2bd] Groq API success - Duration: 4.05s, Response length: 2674, Attempts: 1
+2025-11-30 17:26:46,399 - scripts.custom_groq_llm - INFO - [4f43a2bd] Token usage - Prompt: 883, Completion: 610, Total: 1493
+2025-11-30 17:26:46,463 - scripts.custom_groq_llm - INFO - [a3c40474] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4377, Temperature: None
+2025-11-30 17:26:49,184 - scripts.custom_groq_llm - INFO - [a3c40474] Groq API success - Duration: 2.72s, Response length: 3644, Attempts: 1
+2025-11-30 17:26:49,185 - scripts.custom_groq_llm - INFO - [a3c40474] Token usage - Prompt: 887, Completion: 801, Total: 1688
+2025-11-30 17:26:49,266 - scripts.custom_groq_llm - INFO - [29ffe05a] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 7499, Temperature: None
+2025-11-30 17:26:51,488 - scripts.custom_groq_llm - INFO - [29ffe05a] Groq API success - Duration: 2.22s, Response length: 2665, Attempts: 1
+2025-11-30 17:26:51,490 - scripts.custom_groq_llm - INFO - [29ffe05a] Token usage - Prompt: 1620, Completion: 557, Total: 2177
+2025-11-30 17:26:51,549 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 17:26:51,561 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:26:51,575 - app.core.logging - INFO - Analysis result validation - Score: 0.09, Valid: False
+2025-11-30 17:26:51,575 - app.core.logging - WARNING - Analysis result failed validation: ['Content may not fully address the query']
+2025-11-30 17:26:51,576 - app.core.logging - ERROR - Analysis result quality too low, rejecting
+2025-11-30 17:31:28,114 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 17:31:30,953 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 17:32:36,483 - app.core.logging - INFO - Validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:33:22,626 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:33:22,641 - app.core.logging - INFO - Dataset info: 534410 rows, 17 columns
+2025-11-30 17:33:22,700 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:33:22,700 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:33:22,700 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:33:22,701 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:33:22,995 - scripts.custom_groq_llm - INFO - [dd546649] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4071, Temperature: None
+2025-11-30 17:33:26,559 - scripts.custom_groq_llm - INFO - [dd546649] Groq API success - Duration: 3.57s, Response length: 3680, Attempts: 1
+2025-11-30 17:33:26,560 - scripts.custom_groq_llm - INFO - [dd546649] Token usage - Prompt: 883, Completion: 879, Total: 1762
+2025-11-30 17:33:26,680 - scripts.custom_groq_llm - INFO - [6cb2b707] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4553, Temperature: None
+2025-11-30 17:33:29,799 - scripts.custom_groq_llm - INFO - [6cb2b707] Groq API success - Duration: 3.12s, Response length: 4472, Attempts: 1
+2025-11-30 17:33:29,799 - scripts.custom_groq_llm - INFO - [6cb2b707] Token usage - Prompt: 953, Completion: 936, Total: 1889
+2025-11-30 17:33:29,851 - scripts.custom_groq_llm - INFO - [b2ac1f8f] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8335, Temperature: None
+2025-11-30 17:33:35,184 - scripts.custom_groq_llm - INFO - [b2ac1f8f] Groq API success - Duration: 5.33s, Response length: 2923, Attempts: 1
+2025-11-30 17:33:35,184 - scripts.custom_groq_llm - INFO - [b2ac1f8f] Token usage - Prompt: 1761, Completion: 574, Total: 2335
+2025-11-30 17:33:35,217 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 17:33:35,225 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:33:35,227 - app.core.logging - INFO - Analysis result validation - Score: 0.11, Valid: False
+2025-11-30 17:33:35,227 - app.core.logging - WARNING - Analysis result failed validation: ['Content may not fully address the query']
+2025-11-30 17:33:35,227 - app.core.logging - ERROR - Analysis result quality too low, rejecting
+2025-11-30 17:42:51,322 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 17:42:51,999 - app.core.logging - INFO - Starting server on 127.0.0.1:8001
+2025-11-30 17:44:11,167 - app.core.logging - INFO - Uploading file: car_prices.csv
+2025-11-30 17:44:48,569 - app.core.logging - INFO - File uploaded successfully: 558837 rows, 16 columns
+2025-11-30 17:44:48,744 - app.core.logging - INFO - Analyze request received - Query: rapport detaille sur make en fonction des autre pram ...
+2025-11-30 17:44:48,746 - app.core.logging - INFO - Validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:44:54,935 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 17:44:54,936 - app.core.logging - INFO - Dataset info: 558837 rows, 16 columns
+2025-11-30 17:44:54,942 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 17:44:54,943 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 17:44:54,943 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:44:54,944 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 17:44:54,989 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 17:44:55,052 - scripts.custom_groq_llm - INFO - [b20288ce] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4071, Temperature: None
+2025-11-30 17:44:58,426 - scripts.custom_groq_llm - INFO - [b20288ce] Groq API success - Duration: 3.37s, Response length: 4361, Attempts: 1
+2025-11-30 17:44:58,427 - scripts.custom_groq_llm - INFO - [b20288ce] Token usage - Prompt: 883, Completion: 966, Total: 1849
+2025-11-30 17:44:58,478 - scripts.custom_groq_llm - INFO - [4781332c] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4444, Temperature: None
+2025-11-30 17:45:02,075 - scripts.custom_groq_llm - INFO - [4781332c] Groq API success - Duration: 3.60s, Response length: 5757, Attempts: 1
+2025-11-30 17:45:02,082 - scripts.custom_groq_llm - INFO - [4781332c] Token usage - Prompt: 903, Completion: 1382, Total: 2285
+2025-11-30 17:45:02,295 - scripts.custom_groq_llm - INFO - [f6c5da4f] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 9685, Temperature: None
+2025-11-30 17:45:03,831 - scripts.custom_groq_llm - INFO - [f6c5da4f] Groq API success - Duration: 1.54s, Response length: 2969, Attempts: 1
+2025-11-30 17:45:03,835 - scripts.custom_groq_llm - INFO - [f6c5da4f] Token usage - Prompt: 2237, Completion: 611, Total: 2848
+2025-11-30 17:45:04,090 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 17:45:04,151 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 17:45:04,175 - app.core.logging - INFO - Analysis result validation - Score: 0.09, Valid: False
+2025-11-30 17:45:04,177 - app.core.logging - WARNING - Analysis result failed validation: ['Content may not fully address the query']
+2025-11-30 17:45:04,192 - app.core.logging - ERROR - Analysis result quality too low, rejecting
+2025-11-30 18:07:20,438 - app.core.logging - INFO - Health check requested
+2025-11-30 18:11:42,929 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 18:11:44,349 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 18:12:13,924 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 18:12:14,263 - app.core.logging - INFO - Starting server on 127.0.0.1:3001
+2025-11-30 18:13:37,728 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 18:13:38,029 - app.core.logging - INFO - Starting server on 127.0.0.1:3001
+2025-11-30 18:15:38,231 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 18:15:38,646 - app.core.logging - INFO - Starting server on 127.0.0.1:3001
+2025-11-30 18:17:16,490 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 18:17:16,942 - app.core.logging - INFO - Starting server on 127.0.0.1:3001
+2025-11-30 18:18:42,013 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 18:18:42,310 - app.core.logging - INFO - Starting server on 127.0.0.1:3001
+2025-11-30 18:18:58,186 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 18:18:58,479 - app.core.logging - INFO - Starting server on 127.0.0.1:3001
+2025-11-30 18:20:13,317 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 18:20:13,641 - app.core.logging - INFO - Starting server on 127.0.0.1:3001
+2025-11-30 18:34:26,065 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 18:34:47,745 - app.core.logging - INFO - Analyze request received - Query: rapport detaille sur make en fonction des autre pram ...
+2025-11-30 18:34:47,756 - app.core.logging - INFO - Validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 18:35:34,777 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 18:35:34,821 - app.core.logging - INFO - Dataset info: 558837 rows, 16 columns
+2025-11-30 18:35:35,659 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 18:35:35,673 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 18:35:35,674 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 18:35:35,677 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 18:35:36,286 - scripts.custom_groq_llm - INFO - [c6fd0b7a] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4071, Temperature: None
+2025-11-30 18:35:41,129 - scripts.custom_groq_llm - INFO - [c6fd0b7a] Groq API success - Duration: 4.85s, Response length: 2617, Attempts: 1
+2025-11-30 18:35:41,129 - scripts.custom_groq_llm - INFO - [c6fd0b7a] Token usage - Prompt: 883, Completion: 604, Total: 1487
+2025-11-30 18:35:41,226 - scripts.custom_groq_llm - INFO - [5ddb3210] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4434, Temperature: None
+2025-11-30 18:35:46,673 - scripts.custom_groq_llm - INFO - [5ddb3210] Groq API success - Duration: 5.45s, Response length: 4375, Attempts: 1
+2025-11-30 18:35:46,673 - scripts.custom_groq_llm - INFO - [5ddb3210] Token usage - Prompt: 915, Completion: 918, Total: 1833
+2025-11-30 18:35:46,769 - scripts.custom_groq_llm - INFO - [9c57cbab] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8240, Temperature: None
+2025-11-30 18:35:48,826 - scripts.custom_groq_llm - INFO - [9c57cbab] Groq API success - Duration: 2.06s, Response length: 2892, Attempts: 1
+2025-11-30 18:35:48,826 - scripts.custom_groq_llm - INFO - [9c57cbab] Token usage - Prompt: 1747, Completion: 595, Total: 2342
+2025-11-30 18:35:48,961 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 18:35:48,962 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 18:35:49,001 - app.core.logging - INFO - Analysis result validation - Score: 0.11, Valid: False
+2025-11-30 18:35:49,001 - app.core.logging - WARNING - Analysis result failed validation: ['Content may not fully address the query']
+2025-11-30 18:35:49,001 - app.core.logging - ERROR - Analysis result quality too low, rejecting
+2025-11-30 18:38:57,585 - app.core.logging - INFO - Analyze request received - Query: rapport detaille sur make en fonction des autre pram ...
+2025-11-30 18:38:57,588 - app.core.logging - INFO - Validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 18:39:16,882 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 18:39:16,885 - app.core.logging - INFO - Dataset info: 558837 rows, 16 columns
+2025-11-30 18:39:17,017 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 18:39:17,027 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 18:39:17,043 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 18:39:17,055 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 18:39:17,491 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 18:39:17,977 - scripts.custom_groq_llm - INFO - [904ade58] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4071, Temperature: None
+2025-11-30 18:39:22,167 - scripts.custom_groq_llm - INFO - [904ade58] Groq API success - Duration: 4.19s, Response length: 3637, Attempts: 1
+2025-11-30 18:39:22,447 - scripts.custom_groq_llm - INFO - [904ade58] Token usage - Prompt: 883, Completion: 802, Total: 1685
+2025-11-30 18:39:22,888 - scripts.custom_groq_llm - INFO - [4eacc744] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4887, Temperature: None
+2025-11-30 18:39:26,390 - scripts.custom_groq_llm - INFO - [4eacc744] Groq API success - Duration: 3.51s, Response length: 5713, Attempts: 1
+2025-11-30 18:39:26,391 - scripts.custom_groq_llm - INFO - [4eacc744] Token usage - Prompt: 991, Completion: 1097, Total: 2088
+2025-11-30 18:39:26,883 - scripts.custom_groq_llm - INFO - [968423e2] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 9573, Temperature: None
+2025-11-30 18:39:30,142 - scripts.custom_groq_llm - INFO - [968423e2] Groq API success - Duration: 3.26s, Response length: 3065, Attempts: 1
+2025-11-30 18:39:30,146 - scripts.custom_groq_llm - INFO - [968423e2] Token usage - Prompt: 1922, Completion: 608, Total: 2530
+2025-11-30 18:39:30,193 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 18:39:30,196 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 18:39:30,220 - app.core.logging - INFO - Analysis result validation - Score: 0.11, Valid: False
+2025-11-30 18:39:30,221 - app.core.logging - WARNING - Analysis result failed validation: ['Content may not fully address the query']
+2025-11-30 18:39:30,230 - app.core.logging - ERROR - Analysis result quality too low, rejecting
+2025-11-30 18:41:55,756 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 18:42:13,242 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 18:51:25,578 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-11-30 18:51:28,183 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-11-30 18:52:37,387 - app.core.logging - INFO - Analyze request received - Query: rapport detaille sur make en fonction des autre pram ...
+2025-11-30 18:52:37,392 - app.core.logging - INFO - Validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 18:52:49,723 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille sur make en fonction des autre pram
+2025-11-30 18:52:49,724 - app.core.logging - INFO - Dataset info: 558837 rows, 16 columns
+2025-11-30 18:52:49,738 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 18:52:49,738 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 18:52:49,738 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 18:52:49,739 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 18:52:49,877 - scripts.custom_groq_llm - INFO - [4f52d59f] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4071, Temperature: None
+2025-11-30 18:52:52,181 - scripts.custom_groq_llm - INFO - [4f52d59f] Groq API success - Duration: 2.31s, Response length: 2712, Attempts: 1
+2025-11-30 18:52:52,181 - scripts.custom_groq_llm - INFO - [4f52d59f] Token usage - Prompt: 883, Completion: 623, Total: 1506
+2025-11-30 18:52:52,241 - scripts.custom_groq_llm - INFO - [b52b01ac] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4481, Temperature: None
+2025-11-30 18:52:55,403 - scripts.custom_groq_llm - INFO - [b52b01ac] Groq API success - Duration: 3.16s, Response length: 4344, Attempts: 1
+2025-11-30 18:52:55,403 - scripts.custom_groq_llm - INFO - [b52b01ac] Token usage - Prompt: 905, Completion: 923, Total: 1828
+2025-11-30 18:52:55,445 - scripts.custom_groq_llm - INFO - [4b12ef8e] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8183, Temperature: None
+2025-11-30 18:52:55,808 - scripts.custom_groq_llm - WARNING - [4b12ef8e] Rate limit exceeded (attempt 1) - Duration: 0.36s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 100000...
+2025-11-30 18:52:55,808 - scripts.custom_groq_llm - WARNING - [4b12ef8e] Retrying in 30 seconds...
+2025-11-30 18:53:26,205 - scripts.custom_groq_llm - WARNING - [4b12ef8e] Rate limit exceeded (attempt 2) - Duration: 0.40s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99965,...
+2025-11-30 18:53:26,205 - scripts.custom_groq_llm - WARNING - [4b12ef8e] Retrying in 60 seconds...
+2025-11-30 18:54:27,565 - scripts.custom_groq_llm - WARNING - [4b12ef8e] Rate limit exceeded (attempt 3) - Duration: 1.36s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99894,...
+2025-11-30 18:54:27,566 - scripts.custom_groq_llm - WARNING - [4b12ef8e] Retrying in 90 seconds...
+2025-11-30 18:55:57,803 - scripts.custom_groq_llm - WARNING - [4b12ef8e] Rate limit exceeded (attempt 4) - Duration: 0.24s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99789,...
+2025-11-30 18:55:57,803 - scripts.custom_groq_llm - WARNING - [4b12ef8e] Retrying in 120 seconds...
+2025-11-30 19:27:56,603 - scripts.custom_groq_llm - INFO - [4b12ef8e] Groq API success - Duration: 2101.16s, Response length: 3552, Attempts: 5
+2025-11-30 19:27:56,603 - scripts.custom_groq_llm - INFO - [4b12ef8e] Token usage - Prompt: 1719, Completion: 682, Total: 2401
+2025-11-30 19:27:57,077 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 19:27:57,082 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 19:27:57,109 - app.core.logging - INFO - Analysis result validation - Score: 0.81, Valid: True
+2025-11-30 19:27:57,109 - app.core.logging - INFO - Analysis completed successfully
+2025-11-30 19:27:57,236 - app.core.cache - INFO - Cached result for key: 1de644be... (TTL: 3600s)
+2025-11-30 19:49:07,163 - app.core.logging - INFO - Uploading file: car_prices_cleaned.csv
+2025-11-30 19:49:42,128 - app.core.logging - INFO - File uploaded successfully: 534410 rows, 17 columns
+2025-11-30 19:50:33,941 - app.core.logging - INFO - Analyze request received - Query: rapport...
+2025-11-30 19:50:33,942 - app.core.logging - INFO - Validated query: rapport
+2025-11-30 19:50:44,285 - app.core.logging - INFO - Analyzing data with validated query: rapport
+2025-11-30 19:50:44,286 - app.core.logging - INFO - Dataset info: 534410 rows, 17 columns
+2025-11-30 19:50:44,296 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-11-30 19:50:44,296 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 19:50:44,297 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 19:50:44,297 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 19:50:44,392 - scripts.custom_groq_llm - INFO - [603fa301] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4026, Temperature: None
+2025-11-30 19:50:46,929 - scripts.custom_groq_llm - INFO - [603fa301] Groq API success - Duration: 2.54s, Response length: 2846, Attempts: 1
+2025-11-30 19:50:46,929 - scripts.custom_groq_llm - INFO - [603fa301] Token usage - Prompt: 873, Completion: 670, Total: 1543
+2025-11-30 19:50:46,966 - scripts.custom_groq_llm - INFO - [03e63c40] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4676, Temperature: None
+2025-11-30 19:50:47,464 - scripts.custom_groq_llm - WARNING - [03e63c40] Rate limit exceeded (attempt 1) - Duration: 0.49s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99928,...
+2025-11-30 19:50:47,464 - scripts.custom_groq_llm - WARNING - [03e63c40] Retrying in 30 seconds...
+2025-11-30 19:51:18,013 - scripts.custom_groq_llm - WARNING - [03e63c40] Rate limit exceeded (attempt 2) - Duration: 0.55s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99893,...
+2025-11-30 19:51:18,014 - scripts.custom_groq_llm - WARNING - [03e63c40] Retrying in 60 seconds...
+2025-11-30 19:52:18,307 - scripts.custom_groq_llm - WARNING - [03e63c40] Rate limit exceeded (attempt 3) - Duration: 0.29s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99823,...
+2025-11-30 19:52:18,307 - scripts.custom_groq_llm - WARNING - [03e63c40] Retrying in 90 seconds...
+2025-11-30 19:53:48,602 - scripts.custom_groq_llm - WARNING - [03e63c40] Rate limit exceeded (attempt 4) - Duration: 0.29s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99718,...
+2025-11-30 19:53:48,602 - scripts.custom_groq_llm - WARNING - [03e63c40] Retrying in 120 seconds...
+2025-11-30 19:55:50,022 - scripts.custom_groq_llm - WARNING - [03e63c40] Rate limit exceeded (attempt 5) - Duration: 1.42s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99578,...
+2025-11-30 19:55:50,028 - scripts.custom_groq_llm - ERROR - [03e63c40] Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99578, Requested 947. Please try again in 7m33.6s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 19:55:50,032 - scripts.custom_groq_llm - ERROR - [03e63c40] Unexpected error calling Groq API (attempt 5) - Duration: 1.43s, Error: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99578, Requested 947. Please try again in 7m33.6s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 19:55:50,165 - scripts.custom_groq_llm - INFO - [7a016a9c] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4676, Temperature: None
+2025-11-30 19:55:51,237 - scripts.custom_groq_llm - WARNING - [7a016a9c] Rate limit exceeded (attempt 1) - Duration: 1.04s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99577,...
+2025-11-30 19:55:51,238 - scripts.custom_groq_llm - WARNING - [7a016a9c] Retrying in 30 seconds...
+2025-11-30 19:56:23,679 - scripts.custom_groq_llm - WARNING - [7a016a9c] Rate limit exceeded (attempt 2) - Duration: 2.44s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99539,...
+2025-11-30 19:56:23,680 - scripts.custom_groq_llm - WARNING - [7a016a9c] Retrying in 60 seconds...
+2025-11-30 19:57:25,596 - scripts.custom_groq_llm - WARNING - [7a016a9c] Rate limit exceeded (attempt 3) - Duration: 1.91s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99468,...
+2025-11-30 19:57:25,596 - scripts.custom_groq_llm - WARNING - [7a016a9c] Retrying in 90 seconds...
+2025-11-30 19:58:56,017 - scripts.custom_groq_llm - WARNING - [7a016a9c] Rate limit exceeded (attempt 4) - Duration: 0.42s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99362,...
+2025-11-30 19:58:56,018 - scripts.custom_groq_llm - WARNING - [7a016a9c] Retrying in 120 seconds...
+2025-11-30 20:00:56,938 - scripts.custom_groq_llm - WARNING - [7a016a9c] Rate limit exceeded (attempt 5) - Duration: 0.91s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99223,...
+2025-11-30 20:00:56,938 - scripts.custom_groq_llm - ERROR - [7a016a9c] Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99223, Requested 947. Please try again in 2m26.88s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:00:56,938 - scripts.custom_groq_llm - ERROR - [7a016a9c] Unexpected error calling Groq API (attempt 5) - Duration: 0.92s, Error: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99223, Requested 947. Please try again in 2m26.88s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:00:56,947 - scripts.custom_groq_llm - INFO - [8b6715cd] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4676, Temperature: None
+2025-11-30 20:00:58,082 - scripts.custom_groq_llm - WARNING - [8b6715cd] Rate limit exceeded (attempt 1) - Duration: 1.13s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99221,...
+2025-11-30 20:00:58,082 - scripts.custom_groq_llm - WARNING - [8b6715cd] Retrying in 30 seconds...
+2025-11-30 20:01:28,352 - scripts.custom_groq_llm - WARNING - [8b6715cd] Rate limit exceeded (attempt 2) - Duration: 0.27s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99186,...
+2025-11-30 20:01:28,352 - scripts.custom_groq_llm - WARNING - [8b6715cd] Retrying in 60 seconds...
+2025-11-30 20:02:28,564 - scripts.custom_groq_llm - WARNING - [8b6715cd] Rate limit exceeded (attempt 3) - Duration: 0.21s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99116,...
+2025-11-30 20:02:28,565 - scripts.custom_groq_llm - WARNING - [8b6715cd] Retrying in 90 seconds...
+2025-11-30 20:04:03,732 - scripts.custom_groq_llm - INFO - [8b6715cd] Groq API success - Duration: 186.79s, Response length: 4298, Attempts: 4
+2025-11-30 20:04:03,733 - scripts.custom_groq_llm - INFO - [8b6715cd] Token usage - Prompt: 946, Completion: 852, Total: 1798
+2025-11-30 20:04:03,956 - scripts.custom_groq_llm - INFO - [5f5979c9] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8091, Temperature: None
+2025-11-30 20:04:06,187 - scripts.custom_groq_llm - WARNING - [5f5979c9] Rate limit exceeded (attempt 1) - Duration: 2.23s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99996,...
+2025-11-30 20:04:06,187 - scripts.custom_groq_llm - WARNING - [5f5979c9] Retrying in 30 seconds...
+2025-11-30 20:04:37,223 - scripts.custom_groq_llm - WARNING - [5f5979c9] Rate limit exceeded (attempt 2) - Duration: 1.04s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99961,...
+2025-11-30 20:04:37,224 - scripts.custom_groq_llm - WARNING - [5f5979c9] Retrying in 60 seconds...
+2025-11-30 20:05:37,499 - scripts.custom_groq_llm - WARNING - [5f5979c9] Rate limit exceeded (attempt 3) - Duration: 0.27s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99891,...
+2025-11-30 20:05:37,500 - scripts.custom_groq_llm - WARNING - [5f5979c9] Retrying in 90 seconds...
+2025-11-30 20:07:07,712 - scripts.custom_groq_llm - WARNING - [5f5979c9] Rate limit exceeded (attempt 4) - Duration: 0.21s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99786,...
+2025-11-30 20:07:07,712 - scripts.custom_groq_llm - WARNING - [5f5979c9] Retrying in 120 seconds...
+2025-11-30 20:09:08,397 - scripts.custom_groq_llm - WARNING - [5f5979c9] Rate limit exceeded (attempt 5) - Duration: 0.68s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99647,...
+2025-11-30 20:09:08,397 - scripts.custom_groq_llm - ERROR - [5f5979c9] Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99647, Requested 1644. Please try again in 18m35.424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:09:08,397 - scripts.custom_groq_llm - ERROR - [5f5979c9] Unexpected error calling Groq API (attempt 5) - Duration: 0.68s, Error: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99647, Requested 1644. Please try again in 18m35.424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:09:08,397 - scripts.custom_groq_llm - INFO - [3b0121e6] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8091, Temperature: None
+2025-11-30 20:09:08,817 - scripts.custom_groq_llm - WARNING - [3b0121e6] Rate limit exceeded (attempt 1) - Duration: 0.41s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99646,...
+2025-11-30 20:09:08,817 - scripts.custom_groq_llm - WARNING - [3b0121e6] Retrying in 30 seconds...
+2025-11-30 20:09:39,118 - scripts.custom_groq_llm - WARNING - [3b0121e6] Rate limit exceeded (attempt 2) - Duration: 0.30s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99611,...
+2025-11-30 20:09:39,118 - scripts.custom_groq_llm - WARNING - [3b0121e6] Retrying in 60 seconds...
+2025-11-30 20:10:39,392 - scripts.custom_groq_llm - WARNING - [3b0121e6] Rate limit exceeded (attempt 3) - Duration: 0.27s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99541,...
+2025-11-30 20:10:39,392 - scripts.custom_groq_llm - WARNING - [3b0121e6] Retrying in 90 seconds...
+2025-11-30 20:12:09,657 - scripts.custom_groq_llm - WARNING - [3b0121e6] Rate limit exceeded (attempt 4) - Duration: 0.26s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99437,...
+2025-11-30 20:12:09,658 - scripts.custom_groq_llm - WARNING - [3b0121e6] Retrying in 120 seconds...
+2025-11-30 20:14:09,942 - scripts.custom_groq_llm - WARNING - [3b0121e6] Rate limit exceeded (attempt 5) - Duration: 0.28s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99298,...
+2025-11-30 20:14:09,942 - scripts.custom_groq_llm - ERROR - [3b0121e6] Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99298, Requested 1644. Please try again in 13m33.887999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:14:09,942 - scripts.custom_groq_llm - ERROR - [3b0121e6] Unexpected error calling Groq API (attempt 5) - Duration: 0.28s, Error: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99298, Requested 1644. Please try again in 13m33.887999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:14:09,952 - scripts.custom_groq_llm - INFO - [4653bba8] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8091, Temperature: None
+2025-11-30 20:14:10,236 - scripts.custom_groq_llm - WARNING - [4653bba8] Rate limit exceeded (attempt 1) - Duration: 0.27s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99297,...
+2025-11-30 20:14:10,236 - scripts.custom_groq_llm - WARNING - [4653bba8] Retrying in 30 seconds...
+2025-11-30 20:14:40,432 - scripts.custom_groq_llm - WARNING - [4653bba8] Rate limit exceeded (attempt 2) - Duration: 0.19s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99262,...
+2025-11-30 20:14:40,432 - scripts.custom_groq_llm - WARNING - [4653bba8] Retrying in 60 seconds...
+2025-11-30 20:15:40,700 - scripts.custom_groq_llm - WARNING - [4653bba8] Rate limit exceeded (attempt 3) - Duration: 0.27s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99192,...
+2025-11-30 20:15:40,702 - scripts.custom_groq_llm - WARNING - [4653bba8] Retrying in 90 seconds...
+2025-11-30 20:17:11,040 - scripts.custom_groq_llm - WARNING - [4653bba8] Rate limit exceeded (attempt 4) - Duration: 0.34s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99088,...
+2025-11-30 20:17:11,040 - scripts.custom_groq_llm - WARNING - [4653bba8] Retrying in 120 seconds...
+2025-11-30 20:19:13,175 - scripts.custom_groq_llm - WARNING - [4653bba8] Rate limit exceeded (attempt 5) - Duration: 2.13s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98947,...
+2025-11-30 20:19:13,176 - scripts.custom_groq_llm - ERROR - [4653bba8] Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98947, Requested 1644. Please try again in 8m30.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:19:13,176 - scripts.custom_groq_llm - ERROR - [4653bba8] Unexpected error calling Groq API (attempt 5) - Duration: 2.13s, Error: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98947, Requested 1644. Please try again in 8m30.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:19:13,926 - scripts.crew - ERROR - Analysis crew execution error: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98947, Requested 1644. Please try again in 8m30.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:19:13,932 - scripts.crew - ERROR - Error type: ValueError
+2025-11-30 20:19:15,421 - scripts.crew - ERROR - Full traceback: Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\scripts\custom_groq_llm.py", line 134, in call
+    raise ValueError(error_msg)
+ValueError: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99647, Requested 1644. Please try again in 18m35.424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\scripts\custom_groq_llm.py", line 134, in call
+    raise ValueError(error_msg)
+ValueError: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99298, Requested 1644. Please try again in 13m33.887999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\scripts\crew.py", line 103, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 755, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 995, in _run_sequential_process
+    return self._execute_tasks(self.tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 1103, in _execute_tasks
+    task_output = task.execute_sync(
+                  ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 458, in execute_sync
+    return self._execute_core(agent, context, tools)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 591, in _execute_core
+    raise e  # Re-raise the exception after emitting the event
+    ^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 522, in _execute_core
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 525, in execute_task
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\scripts\custom_groq_llm.py", line 134, in call
+    raise ValueError(error_msg)
+ValueError: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98947, Requested 1644. Please try again in 8m30.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+
+2025-11-30 20:19:15,459 - scripts.crew - ERROR - Crew execution failed on attempt 1: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98947, Requested 1644. Please try again in 8m30.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\scripts\custom_groq_llm.py", line 134, in call
+    raise ValueError(error_msg)
+ValueError: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99647, Requested 1644. Please try again in 18m35.424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\scripts\custom_groq_llm.py", line 134, in call
+    raise ValueError(error_msg)
+ValueError: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99298, Requested 1644. Please try again in 13m33.887999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\scripts\crew.py", line 62, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\scripts\crew.py", line 103, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 755, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 995, in _run_sequential_process
+    return self._execute_tasks(self.tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 1103, in _execute_tasks
+    task_output = task.execute_sync(
+                  ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 458, in execute_sync
+    return self._execute_core(agent, context, tools)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 591, in _execute_core
+    raise e  # Re-raise the exception after emitting the event
+    ^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 522, in _execute_core
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 525, in execute_task
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\scripts\custom_groq_llm.py", line 134, in call
+    raise ValueError(error_msg)
+ValueError: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98947, Requested 1644. Please try again in 8m30.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:19:15,603 - scripts.crew - INFO - Retrying crew execution in 1 seconds...
+2025-11-30 20:19:16,708 - scripts.crew - INFO - Starting crew execution (attempt 2/3)
+2025-11-30 20:19:16,748 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-11-30 20:19:16,748 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-11-30 20:19:16,759 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-11-30 20:19:17,150 - scripts.custom_groq_llm - INFO - [ba94cc30] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4026, Temperature: None
+2025-11-30 20:19:19,701 - scripts.custom_groq_llm - INFO - [ba94cc30] Groq API success - Duration: 2.55s, Response length: 3865, Attempts: 1
+2025-11-30 20:19:19,701 - scripts.custom_groq_llm - INFO - [ba94cc30] Token usage - Prompt: 873, Completion: 921, Total: 1794
+2025-11-30 20:19:19,798 - scripts.custom_groq_llm - INFO - [b807daa6] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4567, Temperature: None
+2025-11-30 20:19:20,019 - scripts.custom_groq_llm - WARNING - [b807daa6] Rate limit exceeded (attempt 1) - Duration: 0.22s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 100000...
+2025-11-30 20:19:20,019 - scripts.custom_groq_llm - WARNING - [b807daa6] Retrying in 30 seconds...
+2025-11-30 20:19:50,231 - scripts.custom_groq_llm - WARNING - [b807daa6] Rate limit exceeded (attempt 2) - Duration: 0.21s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99965,...
+2025-11-30 20:19:50,231 - scripts.custom_groq_llm - WARNING - [b807daa6] Retrying in 60 seconds...
+2025-11-30 20:20:51,001 - scripts.custom_groq_llm - WARNING - [b807daa6] Rate limit exceeded (attempt 3) - Duration: 0.77s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99895,...
+2025-11-30 20:20:51,001 - scripts.custom_groq_llm - WARNING - [b807daa6] Retrying in 90 seconds...
+2025-11-30 20:22:21,253 - scripts.custom_groq_llm - WARNING - [b807daa6] Rate limit exceeded (attempt 4) - Duration: 0.25s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99790,...
+2025-11-30 20:22:21,253 - scripts.custom_groq_llm - WARNING - [b807daa6] Retrying in 120 seconds...
+2025-11-30 20:24:21,911 - scripts.custom_groq_llm - WARNING - [b807daa6] Rate limit exceeded (attempt 5) - Duration: 0.66s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99651,...
+2025-11-30 20:24:21,911 - scripts.custom_groq_llm - ERROR - [b807daa6] Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99651, Requested 940. Please try again in 8m30.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:24:21,912 - scripts.custom_groq_llm - ERROR - [b807daa6] Unexpected error calling Groq API (attempt 5) - Duration: 0.66s, Error: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99651, Requested 940. Please try again in 8m30.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:24:21,917 - scripts.custom_groq_llm - INFO - [f309ce14] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4567, Temperature: None
+2025-11-30 20:24:22,929 - scripts.custom_groq_llm - WARNING - [f309ce14] Rate limit exceeded (attempt 1) - Duration: 1.01s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99650,...
+2025-11-30 20:24:22,930 - scripts.custom_groq_llm - WARNING - [f309ce14] Retrying in 30 seconds...
+2025-11-30 20:24:54,609 - scripts.custom_groq_llm - WARNING - [f309ce14] Rate limit exceeded (attempt 2) - Duration: 1.68s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99613,...
+2025-11-30 20:24:54,611 - scripts.custom_groq_llm - WARNING - [f309ce14] Retrying in 60 seconds...
+2025-11-30 20:25:55,227 - scripts.custom_groq_llm - WARNING - [f309ce14] Rate limit exceeded (attempt 3) - Duration: 0.62s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99543,...
+2025-11-30 20:25:55,227 - scripts.custom_groq_llm - WARNING - [f309ce14] Retrying in 90 seconds...
+2025-11-30 20:27:30,969 - scripts.custom_groq_llm - WARNING - [f309ce14] Rate limit exceeded (attempt 4) - Duration: 5.74s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99433,...
+2025-11-30 20:27:30,969 - scripts.custom_groq_llm - WARNING - [f309ce14] Retrying in 120 seconds...
+2025-11-30 20:29:32,232 - scripts.custom_groq_llm - WARNING - [f309ce14] Rate limit exceeded (attempt 5) - Duration: 1.26s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99292,...
+2025-11-30 20:29:32,232 - scripts.custom_groq_llm - ERROR - [f309ce14] Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99292, Requested 940. Please try again in 3m20.448s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:29:32,232 - scripts.custom_groq_llm - ERROR - [f309ce14] Unexpected error calling Groq API (attempt 5) - Duration: 1.26s, Error: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99292, Requested 940. Please try again in 3m20.448s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:29:32,257 - scripts.custom_groq_llm - INFO - [aa3795fd] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4567, Temperature: None
+2025-11-30 20:29:32,668 - scripts.custom_groq_llm - WARNING - [aa3795fd] Rate limit exceeded (attempt 1) - Duration: 0.41s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99291,...
+2025-11-30 20:29:32,668 - scripts.custom_groq_llm - WARNING - [aa3795fd] Retrying in 30 seconds...
+2025-11-30 20:30:02,959 - scripts.custom_groq_llm - WARNING - [aa3795fd] Rate limit exceeded (attempt 2) - Duration: 0.29s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99256,...
+2025-11-30 20:30:02,959 - scripts.custom_groq_llm - WARNING - [aa3795fd] Retrying in 60 seconds...
+2025-11-30 20:31:03,349 - scripts.custom_groq_llm - WARNING - [aa3795fd] Rate limit exceeded (attempt 3) - Duration: 0.39s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99186,...
+2025-11-30 20:31:03,350 - scripts.custom_groq_llm - WARNING - [aa3795fd] Retrying in 90 seconds...
+2025-11-30 20:32:33,687 - scripts.custom_groq_llm - WARNING - [aa3795fd] Rate limit exceeded (attempt 4) - Duration: 0.34s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99082,...
+2025-11-30 20:32:33,687 - scripts.custom_groq_llm - WARNING - [aa3795fd] Retrying in 120 seconds...
+2025-11-30 20:34:37,516 - scripts.custom_groq_llm - INFO - [aa3795fd] Groq API success - Duration: 305.26s, Response length: 4813, Attempts: 5
+2025-11-30 20:34:37,516 - scripts.custom_groq_llm - INFO - [aa3795fd] Token usage - Prompt: 939, Completion: 994, Total: 1933
+2025-11-30 20:34:37,908 - scripts.custom_groq_llm - INFO - [7728fe61] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8609, Temperature: None
+2025-11-30 20:34:38,234 - scripts.custom_groq_llm - WARNING - [7728fe61] Rate limit exceeded (attempt 1) - Duration: 0.31s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 100000...
+2025-11-30 20:34:38,234 - scripts.custom_groq_llm - WARNING - [7728fe61] Retrying in 30 seconds...
+2025-11-30 20:35:08,484 - scripts.custom_groq_llm - WARNING - [7728fe61] Rate limit exceeded (attempt 2) - Duration: 0.25s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99965,...
+2025-11-30 20:35:08,485 - scripts.custom_groq_llm - WARNING - [7728fe61] Retrying in 60 seconds...
+2025-11-30 20:36:08,738 - scripts.custom_groq_llm - WARNING - [7728fe61] Rate limit exceeded (attempt 3) - Duration: 0.25s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99895,...
+2025-11-30 20:36:08,738 - scripts.custom_groq_llm - WARNING - [7728fe61] Retrying in 90 seconds...
+2025-11-30 20:37:42,358 - scripts.custom_groq_llm - WARNING - [7728fe61] Rate limit exceeded (attempt 4) - Duration: 3.60s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99787,...
+2025-11-30 20:37:42,358 - scripts.custom_groq_llm - WARNING - [7728fe61] Retrying in 120 seconds...
+2025-11-30 20:39:42,633 - scripts.custom_groq_llm - WARNING - [7728fe61] Rate limit exceeded (attempt 5) - Duration: 0.27s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99647,...
+2025-11-30 20:39:42,633 - scripts.custom_groq_llm - ERROR - [7728fe61] Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99647, Requested 1774. Please try again in 20m27.744s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:39:42,633 - scripts.custom_groq_llm - ERROR - [7728fe61] Unexpected error calling Groq API (attempt 5) - Duration: 0.27s, Error: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99647, Requested 1774. Please try again in 20m27.744s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:39:42,638 - scripts.custom_groq_llm - INFO - [2990d530] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8609, Temperature: None
+2025-11-30 20:39:42,846 - scripts.custom_groq_llm - WARNING - [2990d530] Rate limit exceeded (attempt 1) - Duration: 0.20s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99647,...
+2025-11-30 20:39:42,847 - scripts.custom_groq_llm - WARNING - [2990d530] Retrying in 30 seconds...
+2025-11-30 20:40:13,140 - scripts.custom_groq_llm - WARNING - [2990d530] Rate limit exceeded (attempt 2) - Duration: 0.28s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99612,...
+2025-11-30 20:40:13,143 - scripts.custom_groq_llm - WARNING - [2990d530] Retrying in 60 seconds...
+2025-11-30 20:41:13,345 - scripts.custom_groq_llm - WARNING - [2990d530] Rate limit exceeded (attempt 3) - Duration: 0.20s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99542,...
+2025-11-30 20:41:13,346 - scripts.custom_groq_llm - WARNING - [2990d530] Retrying in 90 seconds...
+2025-11-30 20:42:43,606 - scripts.custom_groq_llm - WARNING - [2990d530] Rate limit exceeded (attempt 4) - Duration: 0.26s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99438,...
+2025-11-30 20:42:43,609 - scripts.custom_groq_llm - WARNING - [2990d530] Retrying in 120 seconds...
+2025-11-30 20:44:43,899 - scripts.custom_groq_llm - WARNING - [2990d530] Rate limit exceeded (attempt 5) - Duration: 0.29s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99299,...
+2025-11-30 20:44:43,899 - scripts.custom_groq_llm - ERROR - [2990d530] Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99299, Requested 1774. Please try again in 15m27.072s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:44:43,899 - scripts.custom_groq_llm - ERROR - [2990d530] Unexpected error calling Groq API (attempt 5) - Duration: 0.29s, Error: Groq API rate limit exceeded after 5 retries: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99299, Requested 1774. Please try again in 15m27.072s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-11-30 20:44:43,910 - scripts.custom_groq_llm - INFO - [b2a9c0fa] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8609, Temperature: None
+2025-11-30 20:44:44,129 - scripts.custom_groq_llm - WARNING - [b2a9c0fa] Rate limit exceeded (attempt 1) - Duration: 0.19s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99298,...
+2025-11-30 20:44:44,129 - scripts.custom_groq_llm - WARNING - [b2a9c0fa] Retrying in 30 seconds...
+2025-11-30 20:45:14,343 - scripts.custom_groq_llm - WARNING - [b2a9c0fa] Rate limit exceeded (attempt 2) - Duration: 0.21s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99263,...
+2025-11-30 20:45:14,343 - scripts.custom_groq_llm - WARNING - [b2a9c0fa] Retrying in 60 seconds...
+2025-11-30 20:46:14,555 - scripts.custom_groq_llm - WARNING - [b2a9c0fa] Rate limit exceeded (attempt 3) - Duration: 0.21s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99194,...
+2025-11-30 20:46:14,555 - scripts.custom_groq_llm - WARNING - [b2a9c0fa] Retrying in 90 seconds...
+2025-11-30 20:47:44,761 - scripts.custom_groq_llm - WARNING - [b2a9c0fa] Rate limit exceeded (attempt 4) - Duration: 0.21s, Response: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kb7kgmw3fm3rcwrqqb5z1eer` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99089,...
+2025-11-30 20:47:44,761 - scripts.custom_groq_llm - WARNING - [b2a9c0fa] Retrying in 120 seconds...
+2025-11-30 21:40:50,756 - scripts.custom_groq_llm - INFO - [b2a9c0fa] Groq API success - Duration: 3366.85s, Response length: 2794, Attempts: 5
+2025-11-30 21:40:50,756 - scripts.custom_groq_llm - INFO - [b2a9c0fa] Token usage - Prompt: 1773, Completion: 555, Total: 2328
+2025-11-30 21:40:51,132 - scripts.crew - INFO - Analysis crew executed successfully
+2025-11-30 21:40:51,132 - scripts.crew - INFO - Crew execution completed successfully
+2025-11-30 21:40:51,163 - app.core.logging - INFO - Analysis result validation - Score: 0.78, Valid: True
+2025-11-30 21:40:51,163 - app.core.logging - INFO - Analysis completed successfully
+2025-11-30 21:40:51,261 - app.core.cache - INFO - Cached result for key: cd6483e2... (TTL: 3600s)
+2025-12-01 18:51:33,363 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-01 19:56:16,441 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-01 19:56:19,944 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-01 20:06:03,059 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-01 20:06:07,857 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-01 20:16:54,988 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-01 20:16:56,741 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-01 20:50:01,715 - app.core.logging - INFO - Analyze request received - Query: rapport daye about makes...
+2025-12-01 20:50:22,172 - app.core.logging - INFO - Analyzing data with validated query: rapport daye about makes
+2025-12-01 20:50:22,227 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-12-01 20:50:22,232 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-12-01 20:50:22,235 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-12-01 20:50:22,238 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-12-01 20:50:22,704 - scripts.custom_groq_llm - INFO - [edfcf15c] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4043, Temperature: None
+2025-12-01 20:50:27,420 - scripts.custom_groq_llm - INFO - [edfcf15c] Groq API success - Duration: 4.72s, Response length: 3411, Attempts: 1
+2025-12-01 20:50:27,421 - scripts.custom_groq_llm - INFO - [edfcf15c] Token usage - Prompt: 877, Completion: 814, Total: 1691
+2025-12-01 20:50:27,535 - scripts.custom_groq_llm - INFO - [f2bf7df9] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4604, Temperature: None
+2025-12-01 20:50:30,091 - scripts.custom_groq_llm - INFO - [f2bf7df9] Groq API success - Duration: 2.56s, Response length: 4136, Attempts: 1
+2025-12-01 20:50:30,091 - scripts.custom_groq_llm - INFO - [f2bf7df9] Token usage - Prompt: 937, Completion: 839, Total: 1776
+2025-12-01 20:50:30,174 - scripts.custom_groq_llm - INFO - [318934bd] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 7941, Temperature: None
+2025-12-01 20:50:32,084 - scripts.custom_groq_llm - INFO - [318934bd] Groq API success - Duration: 1.91s, Response length: 3156, Attempts: 1
+2025-12-01 20:50:32,084 - scripts.custom_groq_llm - INFO - [318934bd] Token usage - Prompt: 1613, Completion: 596, Total: 2209
+2025-12-01 20:50:32,135 - scripts.crew - INFO - Analysis crew executed successfully
+2025-12-01 20:50:32,143 - scripts.crew - INFO - Crew execution completed successfully
+2025-12-01 20:50:32,152 - app.core.cache - INFO - Cached result for key: 0d3cd8a2... (TTL: 3600s)
+2025-12-01 20:58:46,027 - app.core.logging - INFO - Uploading file: car_prices_cleaned.csv
+2025-12-01 21:01:08,784 - app.core.logging - INFO - File uploaded successfully: 534410 rows, 17 columns
+2025-12-01 21:03:19,974 - app.core.logging - INFO - Uploading file: car_prices_cleaned.csv
+2025-12-01 21:06:16,791 - app.core.logging - INFO - File uploaded successfully: 534410 rows, 17 columns
+2025-12-01 21:14:56,298 - app.core.logging - INFO - Uploading file: car_prices_cleaned.csv
+2025-12-01 21:16:19,321 - app.core.logging - INFO - File uploaded successfully: 534410 rows, 17 columns
+2025-12-01 21:22:11,257 - app.core.logging - INFO - Uploading file: car_prices_cleaned.csv
+2025-12-01 21:24:04,910 - app.core.logging - INFO - File uploaded successfully: 534410 rows, 17 columns
+2025-12-01 21:33:45,358 - app.core.logging - INFO - Uploading file: car_prices_cleaned.csv
+2025-12-01 21:37:17,552 - app.core.logging - INFO - File uploaded successfully: 534410 rows, 17 columns
+2025-12-01 21:46:50,272 - app.core.logging - INFO - Uploading file: car_prices_cleaned.csv
+2025-12-01 21:48:34,703 - app.core.logging - INFO - File uploaded successfully: 534410 rows, 17 columns
+2025-12-01 21:56:27,392 - app.core.logging - INFO - Uploading file: car_prices.csv
+2025-12-01 21:57:54,900 - app.core.logging - INFO - File uploaded successfully: 558837 rows, 16 columns

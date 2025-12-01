@@ -1,9 +1,9 @@
 // Configuration de l'API
 export const API_CONFIG = {
-  BASE_URL: process.env.NODE_ENV === 'production' 
-    ? 'https://your-api-domain.com' 
+  BASE_URL: process.env.NODE_ENV === 'production'
+    ? 'https://your-api-domain.com'
     : 'http://localhost:8000',
-  
+
   ENDPOINTS: {
     UPLOAD: '/data/upload',
     ANALYZE: '/analysis/analyze',
@@ -12,7 +12,7 @@ export const API_CONFIG = {
     DATA_CLEAR: '/data/clear',
     HEALTH: '/health',
   },
-  
+
   TIMEOUT: 30000, // 30 secondes
 };
 

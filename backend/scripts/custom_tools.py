@@ -77,6 +77,34 @@ def tables_schema_tool(tables: str):
 def execute_sql_tool(sql_query: str):
     """Execute a SQL query against the database and return the result."""
     try:
+        # Security validation: Check for dangerous operations
+        sql_lower = sql_query.lower().strip()
+
+        # Block dangerous operations
+        dangerous_patterns = [
+            r'\b(drop|delete|update|insert|alter|create|truncate)\b',
+            r';\s*(drop|delete|update|insert|alter|create|truncate)\b',
+            r'--',
+            r'/\*.*\*/',
+            r'union\s+select',
+            r'information_schema',
+            r'pragma',
+            r'attach',
+            r'detach'
+        ]
+
+        for pattern in dangerous_patterns:
+            if re.search(pattern, sql_lower):
+                return {"status": "error", "message": f"Query contains potentially dangerous operation: {pattern}"}
+
+        # Only allow SELECT statements
+        if not sql_lower.startswith('select'):
+            return {"status": "error", "message": "Only SELECT queries are allowed for security reasons"}
+
+        # Limit result size to prevent resource exhaustion
+        if 'limit' not in sql_lower:
+            sql_query += " LIMIT 1000"
+
         db = SQLDatabase.from_uri(f"sqlite:///{DATABASE_FILE}")
         result = QuerySQLDataBaseTool(db=db).invoke(sql_query)
         return {"status": "success", "data": result}
