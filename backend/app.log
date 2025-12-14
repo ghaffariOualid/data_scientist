@@ -1238,3 +1238,2386 @@ ValueError: Groq API rate limit exceeded after 5 retries: {"error":{"message":"R
 2025-12-01 21:48:34,703 - app.core.logging - INFO - File uploaded successfully: 534410 rows, 17 columns
 2025-12-01 21:56:27,392 - app.core.logging - INFO - Uploading file: car_prices.csv
 2025-12-01 21:57:54,900 - app.core.logging - INFO - File uploaded successfully: 558837 rows, 16 columns
+2025-12-13 08:49:37,376 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 08:49:42,140 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-13 08:50:25,028 - app.core.logging - INFO - Uploading file: kc_house_data.csv
+2025-12-13 08:50:29,463 - app.core.logging - INFO - File uploaded successfully: 21613 rows, 21 columns
+2025-12-13 08:52:00,172 - app.core.logging - INFO - Analyze request received - Query: rapport detaille...
+2025-12-13 08:52:00,588 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille
+2025-12-13 08:52:00,591 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-12-13 08:52:00,591 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-12-13 08:52:00,592 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-12-13 08:52:00,593 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-12-13 08:52:00,713 - scripts.custom_groq_llm - INFO - [7ce07d5f] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4035, Temperature: None
+2025-12-13 08:52:01,251 - scripts.custom_groq_llm - ERROR - [7ce07d5f] API Error (attempt 1) - Duration: 0.54s, Status: 401, Response: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+...
+2025-12-13 08:52:01,252 - scripts.custom_groq_llm - ERROR - [7ce07d5f] Unexpected error calling Groq API (attempt 1) - Duration: 0.54s, Error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:01,258 - scripts.custom_groq_llm - INFO - [8d584753] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4035, Temperature: None
+2025-12-13 08:52:01,505 - scripts.custom_groq_llm - ERROR - [8d584753] API Error (attempt 1) - Duration: 0.24s, Status: 401, Response: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+...
+2025-12-13 08:52:01,505 - scripts.custom_groq_llm - ERROR - [8d584753] Unexpected error calling Groq API (attempt 1) - Duration: 0.24s, Error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:01,509 - scripts.custom_groq_llm - INFO - [20332642] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4035, Temperature: None
+2025-12-13 08:52:01,789 - scripts.custom_groq_llm - ERROR - [20332642] API Error (attempt 1) - Duration: 0.27s, Status: 401, Response: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+...
+2025-12-13 08:52:01,790 - scripts.custom_groq_llm - ERROR - [20332642] Unexpected error calling Groq API (attempt 1) - Duration: 0.27s, Error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:01,797 - scripts.crew - ERROR - Analysis crew execution error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:01,802 - scripts.crew - ERROR - Error type: ValueError
+2025-12-13 08:52:01,876 - scripts.crew - ERROR - Full traceback: Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 103, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 755, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 995, in _run_sequential_process
+    return self._execute_tasks(self.tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 1103, in _execute_tasks
+    task_output = task.execute_sync(
+                  ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 458, in execute_sync
+    return self._execute_core(agent, context, tools)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 591, in _execute_core
+    raise e  # Re-raise the exception after emitting the event
+    ^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 522, in _execute_core
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 525, in execute_task
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+2025-12-13 08:52:01,885 - scripts.crew - ERROR - Crew execution failed on attempt 1: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 62, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 103, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 755, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 995, in _run_sequential_process
+    return self._execute_tasks(self.tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 1103, in _execute_tasks
+    task_output = task.execute_sync(
+                  ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 458, in execute_sync
+    return self._execute_core(agent, context, tools)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 591, in _execute_core
+    raise e  # Re-raise the exception after emitting the event
+    ^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 522, in _execute_core
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 525, in execute_task
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:01,989 - scripts.crew - INFO - Retrying crew execution in 1 seconds...
+2025-12-13 08:52:03,011 - scripts.crew - INFO - Starting crew execution (attempt 2/3)
+2025-12-13 08:52:03,012 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-12-13 08:52:03,013 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-12-13 08:52:03,013 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-12-13 08:52:03,107 - scripts.custom_groq_llm - INFO - [c0763266] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4035, Temperature: None
+2025-12-13 08:52:03,837 - scripts.custom_groq_llm - ERROR - [c0763266] API Error (attempt 1) - Duration: 0.72s, Status: 401, Response: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+...
+2025-12-13 08:52:03,838 - scripts.custom_groq_llm - ERROR - [c0763266] Unexpected error calling Groq API (attempt 1) - Duration: 0.72s, Error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:03,855 - scripts.custom_groq_llm - INFO - [8d194aa2] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4035, Temperature: None
+2025-12-13 08:52:04,111 - scripts.custom_groq_llm - ERROR - [8d194aa2] API Error (attempt 1) - Duration: 0.24s, Status: 401, Response: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+...
+2025-12-13 08:52:04,133 - scripts.custom_groq_llm - ERROR - [8d194aa2] Unexpected error calling Groq API (attempt 1) - Duration: 0.26s, Error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:04,146 - scripts.custom_groq_llm - INFO - [00e45145] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4035, Temperature: None
+2025-12-13 08:52:04,594 - scripts.custom_groq_llm - ERROR - [00e45145] API Error (attempt 1) - Duration: 0.39s, Status: 401, Response: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+...
+2025-12-13 08:52:04,595 - scripts.custom_groq_llm - ERROR - [00e45145] Unexpected error calling Groq API (attempt 1) - Duration: 0.39s, Error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:04,597 - scripts.crew - ERROR - Analysis crew execution error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:04,599 - scripts.crew - ERROR - Error type: ValueError
+2025-12-13 08:52:04,629 - scripts.crew - ERROR - Full traceback: Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 103, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 755, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 995, in _run_sequential_process
+    return self._execute_tasks(self.tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 1103, in _execute_tasks
+    task_output = task.execute_sync(
+                  ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 458, in execute_sync
+    return self._execute_core(agent, context, tools)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 591, in _execute_core
+    raise e  # Re-raise the exception after emitting the event
+    ^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 522, in _execute_core
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 525, in execute_task
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+2025-12-13 08:52:04,682 - scripts.crew - ERROR - Crew execution failed on attempt 2: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 62, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 103, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 755, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 995, in _run_sequential_process
+    return self._execute_tasks(self.tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 1103, in _execute_tasks
+    task_output = task.execute_sync(
+                  ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 458, in execute_sync
+    return self._execute_core(agent, context, tools)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 591, in _execute_core
+    raise e  # Re-raise the exception after emitting the event
+    ^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 522, in _execute_core
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 525, in execute_task
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:04,714 - scripts.crew - INFO - Retrying crew execution in 2 seconds...
+2025-12-13 08:52:06,720 - scripts.crew - INFO - Starting crew execution (attempt 3/3)
+2025-12-13 08:52:06,721 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-12-13 08:52:06,721 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-12-13 08:52:06,722 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-12-13 08:52:06,775 - scripts.custom_groq_llm - INFO - [c2a9248f] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4035, Temperature: None
+2025-12-13 08:52:07,477 - scripts.custom_groq_llm - ERROR - [c2a9248f] API Error (attempt 1) - Duration: 0.69s, Status: 401, Response: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+...
+2025-12-13 08:52:07,478 - scripts.custom_groq_llm - ERROR - [c2a9248f] Unexpected error calling Groq API (attempt 1) - Duration: 0.69s, Error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:07,483 - scripts.custom_groq_llm - INFO - [744a7827] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4035, Temperature: None
+2025-12-13 08:52:08,454 - scripts.custom_groq_llm - ERROR - [744a7827] API Error (attempt 1) - Duration: 0.96s, Status: 401, Response: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+...
+2025-12-13 08:52:08,455 - scripts.custom_groq_llm - ERROR - [744a7827] Unexpected error calling Groq API (attempt 1) - Duration: 0.97s, Error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:08,461 - scripts.custom_groq_llm - INFO - [272e02d9] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4035, Temperature: None
+2025-12-13 08:52:09,333 - scripts.custom_groq_llm - ERROR - [272e02d9] API Error (attempt 1) - Duration: 0.87s, Status: 401, Response: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+...
+2025-12-13 08:52:09,336 - scripts.custom_groq_llm - ERROR - [272e02d9] Unexpected error calling Groq API (attempt 1) - Duration: 0.87s, Error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:09,339 - scripts.crew - ERROR - Analysis crew execution error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:09,343 - scripts.crew - ERROR - Error type: ValueError
+2025-12-13 08:52:09,353 - scripts.crew - ERROR - Full traceback: Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 103, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 755, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 995, in _run_sequential_process
+    return self._execute_tasks(self.tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 1103, in _execute_tasks
+    task_output = task.execute_sync(
+                  ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 458, in execute_sync
+    return self._execute_core(agent, context, tools)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 591, in _execute_core
+    raise e  # Re-raise the exception after emitting the event
+    ^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 522, in _execute_core
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 525, in execute_task
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+2025-12-13 08:52:09,401 - scripts.crew - ERROR - Crew execution failed on attempt 3: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 62, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 103, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 755, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 995, in _run_sequential_process
+    return self._execute_tasks(self.tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\crew.py", line 1103, in _execute_tasks
+    task_output = task.execute_sync(
+                  ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 458, in execute_sync
+    return self._execute_core(agent, context, tools)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 591, in _execute_core
+    raise e  # Re-raise the exception after emitting the event
+    ^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\task.py", line 522, in _execute_core
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 526, in execute_task
+    result = self.execute_task(task, context, tools)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 525, in execute_task
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 490, in execute_task
+    result = self._execute_without_timeout(task_prompt, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 598, in _execute_without_timeout
+    return self.agent_executor.invoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 188, in invoke
+    formatted_answer = self._invoke_loop()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 299, in _invoke_loop
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agents\crew_agent_executor.py", line 229, in _invoke_loop
+    answer = get_llm_response(
+             ^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 276, in get_llm_response
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\agent_utils.py", line 268, in get_llm_response
+    answer = llm.call(
+             ^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\custom_groq_llm.py", line 143, in call
+    raise ValueError(error_msg)
+ValueError: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:09,439 - scripts.crew - ERROR - All crew execution attempts failed
+2025-12-13 08:52:09,453 - scripts.crew - INFO - Attempting fallback analysis...
+2025-12-13 08:52:09,454 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-12-13 08:52:09,454 - scripts.custom_groq_llm - INFO - API Key set: gsk_5NtavSajq3YSJq6A...
+2025-12-13 08:52:09,455 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_5NtavSajq3YSJq6A...
+2025-12-13 08:52:09,501 - scripts.custom_groq_llm - INFO - [2cf495b9] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 1661, Temperature: None
+2025-12-13 08:52:10,103 - scripts.custom_groq_llm - ERROR - [2cf495b9] API Error (attempt 1) - Duration: 0.60s, Status: 401, Response: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+...
+2025-12-13 08:52:10,103 - scripts.custom_groq_llm - ERROR - [2cf495b9] Unexpected error calling Groq API (attempt 1) - Duration: 0.60s, Error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:10,107 - scripts.custom_groq_llm - INFO - [8dc51b2c] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 1661, Temperature: None
+2025-12-13 08:52:10,573 - scripts.custom_groq_llm - ERROR - [8dc51b2c] API Error (attempt 1) - Duration: 0.46s, Status: 401, Response: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+...
+2025-12-13 08:52:10,576 - scripts.custom_groq_llm - ERROR - [8dc51b2c] Unexpected error calling Groq API (attempt 1) - Duration: 0.47s, Error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:10,581 - scripts.custom_groq_llm - INFO - [540776fd] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 1661, Temperature: None
+2025-12-13 08:52:10,807 - scripts.custom_groq_llm - ERROR - [540776fd] API Error (attempt 1) - Duration: 0.22s, Status: 401, Response: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+...
+2025-12-13 08:52:10,808 - scripts.custom_groq_llm - ERROR - [540776fd] Unexpected error calling Groq API (attempt 1) - Duration: 0.22s, Error: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:10,826 - scripts.crew - WARNING - Fallback analysis also failed: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:10,847 - scripts.crew - WARNING - Returning fallback result due to persistent errors: Groq API returned error 401: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2025-12-13 08:52:10,858 - app.core.cache - INFO - Cached result for key: 02d529d3... (TTL: 3600s)
+2025-12-13 08:56:11,751 - app.core.logging - INFO - Analyze request received - Query: rapport detaille...
+2025-12-13 08:56:12,490 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille
+2025-12-13 08:56:12,493 - app.core.cache - INFO - Cache hit for key: 02d529d3... (accessed 1 times)
+2025-12-13 08:56:12,500 - app.core.logging - INFO - Returning cached analysis result
+2025-12-13 08:56:22,865 - app.core.logging - INFO - Analyze request received - Query: rapport detaille...
+2025-12-13 08:56:23,373 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille
+2025-12-13 08:56:23,376 - app.core.cache - INFO - Cache hit for key: 02d529d3... (accessed 2 times)
+2025-12-13 08:56:23,376 - app.core.logging - INFO - Returning cached analysis result
+2025-12-13 08:56:45,297 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 08:56:47,092 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-13 08:56:49,594 - app.core.logging - INFO - Uploading file: kc_house_data.csv
+2025-12-13 08:56:51,006 - app.core.logging - INFO - File uploaded successfully: 21613 rows, 21 columns
+2025-12-13 08:56:55,995 - app.core.logging - INFO - Analyze request received - Query: rapport detaille...
+2025-12-13 08:56:56,261 - app.core.logging - INFO - Analyzing data with validated query: rapport detaille
+2025-12-13 08:56:56,263 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-12-13 08:56:56,264 - scripts.custom_groq_llm - INFO - Initializing CustomGroqLLM with model: llama-3.3-70b-versatile
+2025-12-13 08:56:56,264 - scripts.custom_groq_llm - INFO - API Key set: gsk_Zafyk8BwaUOtaST0...
+2025-12-13 08:56:56,264 - scripts.custom_groq_llm - INFO - API Key after super(): gsk_Zafyk8BwaUOtaST0...
+2025-12-13 08:56:56,302 - scripts.custom_groq_llm - INFO - [e07252a8] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4035, Temperature: None
+2025-12-13 08:56:58,871 - scripts.custom_groq_llm - INFO - [e07252a8] Groq API success - Duration: 2.57s, Response length: 3307, Attempts: 1
+2025-12-13 08:56:58,872 - scripts.custom_groq_llm - INFO - [e07252a8] Token usage - Prompt: 875, Completion: 696, Total: 1571
+2025-12-13 08:56:58,907 - scripts.custom_groq_llm - INFO - [26e52336] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 4397, Temperature: None
+2025-12-13 08:57:01,816 - scripts.custom_groq_llm - INFO - [26e52336] Groq API success - Duration: 2.91s, Response length: 4292, Attempts: 1
+2025-12-13 08:57:01,819 - scripts.custom_groq_llm - INFO - [26e52336] Token usage - Prompt: 901, Completion: 882, Total: 1783
+2025-12-13 08:57:01,882 - scripts.custom_groq_llm - INFO - [bd38a60f] Groq API request - Model: llama-3.3-70b-versatile, Prompt length: 8105, Temperature: None
+2025-12-13 08:57:04,288 - scripts.custom_groq_llm - INFO - [bd38a60f] Groq API success - Duration: 2.41s, Response length: 3629, Attempts: 1
+2025-12-13 08:57:04,288 - scripts.custom_groq_llm - INFO - [bd38a60f] Token usage - Prompt: 1683, Completion: 727, Total: 2410
+2025-12-13 08:57:04,322 - scripts.crew - INFO - Analysis crew executed successfully
+2025-12-13 08:57:04,323 - scripts.crew - INFO - Crew execution completed successfully
+2025-12-13 08:57:04,336 - app.core.cache - INFO - Cached result for key: 02d529d3... (TTL: 3600s)
+2025-12-13 09:05:03,129 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 09:06:10,666 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 09:09:47,920 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 09:11:26,568 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 09:11:45,676 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-13 09:12:52,811 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 09:12:58,711 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-13 09:16:59,800 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 09:17:04,538 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-13 09:22:40,539 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 09:22:43,068 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-13 09:43:02,961 - app.core.logging - INFO - Uploading file: kc_house_data.csv
+2025-12-13 09:43:04,104 - app.core.logging - INFO - File uploaded successfully: 21613 rows, 21 columns
+2025-12-13 09:43:26,240 - app.core.logging - INFO - Analyze request received - Query: rapport detailll...
+2025-12-13 09:43:26,563 - app.core.logging - INFO - Analyzing data with validated query: rapport detailll
+2025-12-13 09:43:26,566 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-12-13 09:43:28,416 - crewai.llm - ERROR - LiteLLM is not available, falling back to LiteLLM
+2025-12-13 09:43:28,416 - crewai.utilities.llm_utils - ERROR - Error instantiating LLM from unknown object type: Fallback to LiteLLM is not available
+2025-12-13 09:43:28,418 - scripts.crew - ERROR - Analysis crew execution error: Fallback to LiteLLM is not available
+2025-12-13 09:43:28,418 - scripts.crew - ERROR - Error type: ImportError
+2025-12-13 09:43:28,429 - scripts.crew - ERROR - Full traceback: Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 88, in _execute_analysis_crew
+    sql_dev = agents.sql_developer()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 27, in sql_developer
+    return Agent(
+           ^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\internal\meta.py", line 58, in post_init_setup_with_extensions
+    result = original_func(self)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 225, in post_init_setup
+    self.llm = create_llm(self.llm)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 66, in create_llm
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 53, in create_llm
+    return LLM(
+           ^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\llm.py", line 402, in __new__
+    raise ImportError("Fallback to LiteLLM is not available") from None
+ImportError: Fallback to LiteLLM is not available
+
+2025-12-13 09:43:28,430 - scripts.crew - ERROR - Crew execution failed on attempt 1: Fallback to LiteLLM is not available
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 62, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 88, in _execute_analysis_crew
+    sql_dev = agents.sql_developer()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 27, in sql_developer
+    return Agent(
+           ^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\internal\meta.py", line 58, in post_init_setup_with_extensions
+    result = original_func(self)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 225, in post_init_setup
+    self.llm = create_llm(self.llm)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 66, in create_llm
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 53, in create_llm
+    return LLM(
+           ^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\llm.py", line 402, in __new__
+    raise ImportError("Fallback to LiteLLM is not available") from None
+ImportError: Fallback to LiteLLM is not available
+2025-12-13 09:43:28,432 - scripts.crew - INFO - Retrying crew execution in 1 seconds...
+2025-12-13 09:43:29,433 - scripts.crew - INFO - Starting crew execution (attempt 2/3)
+2025-12-13 09:43:29,438 - crewai.llm - ERROR - LiteLLM is not available, falling back to LiteLLM
+2025-12-13 09:43:29,439 - crewai.utilities.llm_utils - ERROR - Error instantiating LLM from unknown object type: Fallback to LiteLLM is not available
+2025-12-13 09:43:29,440 - scripts.crew - ERROR - Analysis crew execution error: Fallback to LiteLLM is not available
+2025-12-13 09:43:29,440 - scripts.crew - ERROR - Error type: ImportError
+2025-12-13 09:43:29,446 - scripts.crew - ERROR - Full traceback: Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 88, in _execute_analysis_crew
+    sql_dev = agents.sql_developer()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 27, in sql_developer
+    return Agent(
+           ^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\internal\meta.py", line 58, in post_init_setup_with_extensions
+    result = original_func(self)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 225, in post_init_setup
+    self.llm = create_llm(self.llm)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 66, in create_llm
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 53, in create_llm
+    return LLM(
+           ^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\llm.py", line 402, in __new__
+    raise ImportError("Fallback to LiteLLM is not available") from None
+ImportError: Fallback to LiteLLM is not available
+
+2025-12-13 09:43:29,447 - scripts.crew - ERROR - Crew execution failed on attempt 2: Fallback to LiteLLM is not available
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 62, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 88, in _execute_analysis_crew
+    sql_dev = agents.sql_developer()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 27, in sql_developer
+    return Agent(
+           ^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\internal\meta.py", line 58, in post_init_setup_with_extensions
+    result = original_func(self)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 225, in post_init_setup
+    self.llm = create_llm(self.llm)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 66, in create_llm
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 53, in create_llm
+    return LLM(
+           ^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\llm.py", line 402, in __new__
+    raise ImportError("Fallback to LiteLLM is not available") from None
+ImportError: Fallback to LiteLLM is not available
+2025-12-13 09:43:29,452 - scripts.crew - INFO - Retrying crew execution in 2 seconds...
+2025-12-13 09:43:31,453 - scripts.crew - INFO - Starting crew execution (attempt 3/3)
+2025-12-13 09:43:31,455 - crewai.llm - ERROR - LiteLLM is not available, falling back to LiteLLM
+2025-12-13 09:43:31,455 - crewai.utilities.llm_utils - ERROR - Error instantiating LLM from unknown object type: Fallback to LiteLLM is not available
+2025-12-13 09:43:31,456 - scripts.crew - ERROR - Analysis crew execution error: Fallback to LiteLLM is not available
+2025-12-13 09:43:31,456 - scripts.crew - ERROR - Error type: ImportError
+2025-12-13 09:43:31,461 - scripts.crew - ERROR - Full traceback: Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 88, in _execute_analysis_crew
+    sql_dev = agents.sql_developer()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 27, in sql_developer
+    return Agent(
+           ^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\internal\meta.py", line 58, in post_init_setup_with_extensions
+    result = original_func(self)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 225, in post_init_setup
+    self.llm = create_llm(self.llm)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 66, in create_llm
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 53, in create_llm
+    return LLM(
+           ^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\llm.py", line 402, in __new__
+    raise ImportError("Fallback to LiteLLM is not available") from None
+ImportError: Fallback to LiteLLM is not available
+
+2025-12-13 09:43:31,461 - scripts.crew - ERROR - Crew execution failed on attempt 3: Fallback to LiteLLM is not available
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 62, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 88, in _execute_analysis_crew
+    sql_dev = agents.sql_developer()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 27, in sql_developer
+    return Agent(
+           ^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\internal\meta.py", line 58, in post_init_setup_with_extensions
+    result = original_func(self)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 225, in post_init_setup
+    self.llm = create_llm(self.llm)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 66, in create_llm
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 53, in create_llm
+    return LLM(
+           ^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\llm.py", line 402, in __new__
+    raise ImportError("Fallback to LiteLLM is not available") from None
+ImportError: Fallback to LiteLLM is not available
+2025-12-13 09:43:31,466 - scripts.crew - ERROR - All crew execution attempts failed
+2025-12-13 09:43:31,466 - scripts.crew - INFO - Attempting fallback analysis...
+2025-12-13 09:43:31,471 - crewai.llm - ERROR - LiteLLM is not available, falling back to LiteLLM
+2025-12-13 09:43:31,471 - crewai.utilities.llm_utils - ERROR - Error instantiating LLM from unknown object type: Fallback to LiteLLM is not available
+2025-12-13 09:43:31,472 - scripts.crew - WARNING - Fallback analysis also failed: Fallback to LiteLLM is not available
+2025-12-13 09:43:31,472 - scripts.crew - WARNING - Returning fallback result due to persistent errors: Fallback to LiteLLM is not available
+2025-12-13 09:43:31,481 - app.core.cache - INFO - Cached result for key: abec75f4... (TTL: 3600s)
+2025-12-13 10:34:00,681 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 10:34:04,009 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-13 10:35:54,564 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 10:35:55,250 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-13 10:36:45,558 - app.core.logging - INFO - Uploading file: kc_house_data.csv
+2025-12-13 10:36:47,141 - app.core.logging - INFO - File uploaded successfully: 21613 rows, 21 columns
+2025-12-13 10:37:18,028 - app.core.logging - INFO - Analyze request received - Query: rapppport analysisssss...
+2025-12-13 10:37:19,311 - app.core.logging - INFO - Analyzing data with validated query: rapppport analysisssss
+2025-12-13 10:37:19,313 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-12-13 10:37:19,315 - crewai.llm - ERROR - LiteLLM is not available, falling back to LiteLLM
+2025-12-13 10:37:19,315 - crewai.utilities.llm_utils - ERROR - Error instantiating LLM from unknown object type: Fallback to LiteLLM is not available
+2025-12-13 10:37:19,315 - scripts.crew - ERROR - Analysis crew execution error: Fallback to LiteLLM is not available
+2025-12-13 10:37:19,315 - scripts.crew - ERROR - Error type: ImportError
+2025-12-13 10:37:19,322 - scripts.crew - ERROR - Full traceback: Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 88, in _execute_analysis_crew
+    sql_dev = agents.sql_developer()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 27, in sql_developer
+    return Agent(
+           ^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\internal\meta.py", line 58, in post_init_setup_with_extensions
+    result = original_func(self)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 225, in post_init_setup
+    self.llm = create_llm(self.llm)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 66, in create_llm
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 53, in create_llm
+    return LLM(
+           ^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\llm.py", line 402, in __new__
+    raise ImportError("Fallback to LiteLLM is not available") from None
+ImportError: Fallback to LiteLLM is not available
+
+2025-12-13 10:37:19,322 - scripts.crew - ERROR - Crew execution failed on attempt 1: Fallback to LiteLLM is not available
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 62, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 88, in _execute_analysis_crew
+    sql_dev = agents.sql_developer()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 27, in sql_developer
+    return Agent(
+           ^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\internal\meta.py", line 58, in post_init_setup_with_extensions
+    result = original_func(self)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 225, in post_init_setup
+    self.llm = create_llm(self.llm)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 66, in create_llm
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 53, in create_llm
+    return LLM(
+           ^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\llm.py", line 402, in __new__
+    raise ImportError("Fallback to LiteLLM is not available") from None
+ImportError: Fallback to LiteLLM is not available
+2025-12-13 10:37:19,322 - scripts.crew - INFO - Retrying crew execution in 1 seconds...
+2025-12-13 10:37:20,328 - scripts.crew - INFO - Starting crew execution (attempt 2/3)
+2025-12-13 10:37:20,329 - crewai.llm - ERROR - LiteLLM is not available, falling back to LiteLLM
+2025-12-13 10:37:20,329 - crewai.utilities.llm_utils - ERROR - Error instantiating LLM from unknown object type: Fallback to LiteLLM is not available
+2025-12-13 10:37:20,329 - scripts.crew - ERROR - Analysis crew execution error: Fallback to LiteLLM is not available
+2025-12-13 10:37:20,329 - scripts.crew - ERROR - Error type: ImportError
+2025-12-13 10:37:20,329 - scripts.crew - ERROR - Full traceback: Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 88, in _execute_analysis_crew
+    sql_dev = agents.sql_developer()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 27, in sql_developer
+    return Agent(
+           ^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\internal\meta.py", line 58, in post_init_setup_with_extensions
+    result = original_func(self)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 225, in post_init_setup
+    self.llm = create_llm(self.llm)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 66, in create_llm
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 53, in create_llm
+    return LLM(
+           ^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\llm.py", line 402, in __new__
+    raise ImportError("Fallback to LiteLLM is not available") from None
+ImportError: Fallback to LiteLLM is not available
+
+2025-12-13 10:37:20,329 - scripts.crew - ERROR - Crew execution failed on attempt 2: Fallback to LiteLLM is not available
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 62, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 88, in _execute_analysis_crew
+    sql_dev = agents.sql_developer()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 27, in sql_developer
+    return Agent(
+           ^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\internal\meta.py", line 58, in post_init_setup_with_extensions
+    result = original_func(self)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 225, in post_init_setup
+    self.llm = create_llm(self.llm)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 66, in create_llm
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 53, in create_llm
+    return LLM(
+           ^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\llm.py", line 402, in __new__
+    raise ImportError("Fallback to LiteLLM is not available") from None
+ImportError: Fallback to LiteLLM is not available
+2025-12-13 10:37:20,329 - scripts.crew - INFO - Retrying crew execution in 2 seconds...
+2025-12-13 10:37:22,334 - scripts.crew - INFO - Starting crew execution (attempt 3/3)
+2025-12-13 10:37:22,334 - crewai.llm - ERROR - LiteLLM is not available, falling back to LiteLLM
+2025-12-13 10:37:22,334 - crewai.utilities.llm_utils - ERROR - Error instantiating LLM from unknown object type: Fallback to LiteLLM is not available
+2025-12-13 10:37:22,334 - scripts.crew - ERROR - Analysis crew execution error: Fallback to LiteLLM is not available
+2025-12-13 10:37:22,334 - scripts.crew - ERROR - Error type: ImportError
+2025-12-13 10:37:22,334 - scripts.crew - ERROR - Full traceback: Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 88, in _execute_analysis_crew
+    sql_dev = agents.sql_developer()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 27, in sql_developer
+    return Agent(
+           ^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\internal\meta.py", line 58, in post_init_setup_with_extensions
+    result = original_func(self)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 225, in post_init_setup
+    self.llm = create_llm(self.llm)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 66, in create_llm
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 53, in create_llm
+    return LLM(
+           ^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\llm.py", line 402, in __new__
+    raise ImportError("Fallback to LiteLLM is not available") from None
+ImportError: Fallback to LiteLLM is not available
+
+2025-12-13 10:37:22,337 - scripts.crew - ERROR - Crew execution failed on attempt 3: Fallback to LiteLLM is not available
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 62, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 88, in _execute_analysis_crew
+    sql_dev = agents.sql_developer()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 27, in sql_developer
+    return Agent(
+           ^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\internal\meta.py", line 58, in post_init_setup_with_extensions
+    result = original_func(self)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\agent\core.py", line 225, in post_init_setup
+    self.llm = create_llm(self.llm)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 66, in create_llm
+    raise e
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\utilities\llm_utils.py", line 53, in create_llm
+    return LLM(
+           ^^^^
+  File "c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv\Lib\site-packages\crewai\llm.py", line 402, in __new__
+    raise ImportError("Fallback to LiteLLM is not available") from None
+ImportError: Fallback to LiteLLM is not available
+2025-12-13 10:37:22,337 - scripts.crew - ERROR - All crew execution attempts failed
+2025-12-13 10:37:22,337 - scripts.crew - INFO - Attempting fallback analysis...
+2025-12-13 10:37:22,337 - crewai.llm - ERROR - LiteLLM is not available, falling back to LiteLLM
+2025-12-13 10:37:22,337 - crewai.utilities.llm_utils - ERROR - Error instantiating LLM from unknown object type: Fallback to LiteLLM is not available
+2025-12-13 10:37:22,337 - scripts.crew - WARNING - Fallback analysis also failed: Fallback to LiteLLM is not available
+2025-12-13 10:37:22,337 - scripts.crew - WARNING - Returning fallback result due to persistent errors: Fallback to LiteLLM is not available
+2025-12-13 10:37:22,337 - app.core.cache - INFO - Cached result for key: bcb153fc... (TTL: 3600s)
+2025-12-13 10:38:31,497 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 10:38:32,330 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-13 10:56:03,346 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 10:56:13,508 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:35:45,195 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:36:51,109 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:37:40,583 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:38:57,389 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:41:42,839 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:41:57,661 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:41:57,716 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:47:27,749 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:48:15,918 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:49:06,024 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:49:20,599 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:49:32,099 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:49:46,639 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:50:39,666 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:50:52,380 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:51:02,864 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:51:03,095 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:51:38,207 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-13 11:52:09,769 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-14 14:23:17,017 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-14 14:32:54,295 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-14 14:37:12,463 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-14 14:39:57,252 - app.core.logging - INFO - Uploading file: kc_house_data.csv
+2025-12-14 14:39:59,602 - app.core.logging - INFO - File uploaded successfully: 21613 rows, 21 columns
+2025-12-14 14:40:17,278 - app.core.logging - INFO - Analyze request received - Query: ccccccccccccccccccccccccccccccccccc...
+2025-12-14 14:40:17,897 - app.core.logging - INFO - Analyzing data with validated query: ccccccccccccccccccccccccccccccccccc
+2025-12-14 14:40:17,912 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-12-14 14:40:26,067 - scripts.crew - ERROR - Analysis crew execution error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 33.398967833s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 33
+}
+]
+2025-12-14 14:40:26,070 - scripts.crew - ERROR - Crew execution failed on attempt 1: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 33.398967833s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 33
+}
+]
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 61, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 102, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\crew.py", line 310, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\crew.py", line 392, in _run_sequential_process
+    output = task.execute(context=task_output)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\task.py", line 187, in execute
+    result = self._execute(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\task.py", line 196, in _execute
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agent.py", line 162, in execute_task
+    result = self.agent_executor.invoke(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\chains\base.py", line 163, in invoke
+    raise e
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\chains\base.py", line 153, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agents\executor.py", line 71, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 1138, in _take_next_step
+    [
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 1138, in <listcomp>
+    [
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agents\executor.py", line 135, in _iter_next_step
+    output = self.agent.plan(  # type: ignore #  Incompatible types in assignment (expression has type "AgentAction | AgentFinish | list[AgentAction]", variable has type "AgentAction")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 397, in plan
+    for chunk in self.runnable.stream(inputs, config={"callbacks": callbacks}):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2875, in stream
+    yield from self.transform(iter([input]), config, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2862, in transform
+    yield from self._transform_stream_with_config(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1881, in _transform_stream_with_config
+    chunk: Output = context.run(next, iterator)  # type: ignore
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2826, in _transform
+    for output in final_pipeline:
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1282, in transform
+    for ichunk in input:
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 4736, in transform
+    yield from self.bound.transform(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1300, in transform
+    yield from self.stream(final, config, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 414, in stream
+    yield self.invoke(input, config=config, stop=stop, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 276, in invoke
+    self.generate_prompt(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 633, in generate_prompt
+    return self.generate(prompt_strings, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 803, in generate
+    output = self._generate_helper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 670, in _generate_helper
+    raise e
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 657, in _generate_helper
+    self._generate(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1317, in _generate
+    self._call(prompt, stop=stop, run_manager=run_manager, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 39, in _call
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\generativeai\generative_models.py", line 262, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 812, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 33.398967833s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 33
+}
+]
+2025-12-14 14:40:26,157 - scripts.crew - INFO - Retrying crew execution in 1 seconds...
+2025-12-14 14:40:27,157 - scripts.crew - INFO - Starting crew execution (attempt 2/3)
+2025-12-14 14:40:27,171 - opentelemetry.trace - WARNING - Overriding of current TracerProvider is not allowed
+2025-12-14 14:40:27,521 - scripts.crew - ERROR - Analysis crew execution error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 31.950807374s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 31
+}
+]
+2025-12-14 14:40:27,528 - scripts.crew - ERROR - Crew execution failed on attempt 2: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 31.950807374s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 31
+}
+]
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 61, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 102, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\crew.py", line 310, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\crew.py", line 392, in _run_sequential_process
+    output = task.execute(context=task_output)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\task.py", line 187, in execute
+    result = self._execute(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\task.py", line 196, in _execute
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agent.py", line 162, in execute_task
+    result = self.agent_executor.invoke(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\chains\base.py", line 163, in invoke
+    raise e
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\chains\base.py", line 153, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agents\executor.py", line 71, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 1138, in _take_next_step
+    [
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 1138, in <listcomp>
+    [
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agents\executor.py", line 135, in _iter_next_step
+    output = self.agent.plan(  # type: ignore #  Incompatible types in assignment (expression has type "AgentAction | AgentFinish | list[AgentAction]", variable has type "AgentAction")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 397, in plan
+    for chunk in self.runnable.stream(inputs, config={"callbacks": callbacks}):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2875, in stream
+    yield from self.transform(iter([input]), config, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2862, in transform
+    yield from self._transform_stream_with_config(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1881, in _transform_stream_with_config
+    chunk: Output = context.run(next, iterator)  # type: ignore
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2826, in _transform
+    for output in final_pipeline:
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1282, in transform
+    for ichunk in input:
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 4736, in transform
+    yield from self.bound.transform(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1300, in transform
+    yield from self.stream(final, config, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 414, in stream
+    yield self.invoke(input, config=config, stop=stop, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 276, in invoke
+    self.generate_prompt(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 633, in generate_prompt
+    return self.generate(prompt_strings, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 803, in generate
+    output = self._generate_helper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 670, in _generate_helper
+    raise e
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 657, in _generate_helper
+    self._generate(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1317, in _generate
+    self._call(prompt, stop=stop, run_manager=run_manager, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 39, in _call
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\generativeai\generative_models.py", line 262, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 812, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 31.950807374s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 31
+}
+]
+2025-12-14 14:40:27,629 - scripts.crew - INFO - Retrying crew execution in 2 seconds...
+2025-12-14 14:40:29,636 - scripts.crew - INFO - Starting crew execution (attempt 3/3)
+2025-12-14 14:40:29,653 - opentelemetry.trace - WARNING - Overriding of current TracerProvider is not allowed
+2025-12-14 14:40:30,142 - scripts.crew - ERROR - Analysis crew execution error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 29.317565775s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 29
+}
+]
+2025-12-14 14:40:30,144 - scripts.crew - ERROR - Crew execution failed on attempt 3: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 29.317565775s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 29
+}
+]
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 61, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 102, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\crew.py", line 310, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\crew.py", line 392, in _run_sequential_process
+    output = task.execute(context=task_output)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\task.py", line 187, in execute
+    result = self._execute(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\task.py", line 196, in _execute
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agent.py", line 162, in execute_task
+    result = self.agent_executor.invoke(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\chains\base.py", line 163, in invoke
+    raise e
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\chains\base.py", line 153, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agents\executor.py", line 71, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 1138, in _take_next_step
+    [
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 1138, in <listcomp>
+    [
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agents\executor.py", line 135, in _iter_next_step
+    output = self.agent.plan(  # type: ignore #  Incompatible types in assignment (expression has type "AgentAction | AgentFinish | list[AgentAction]", variable has type "AgentAction")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 397, in plan
+    for chunk in self.runnable.stream(inputs, config={"callbacks": callbacks}):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2875, in stream
+    yield from self.transform(iter([input]), config, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2862, in transform
+    yield from self._transform_stream_with_config(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1881, in _transform_stream_with_config
+    chunk: Output = context.run(next, iterator)  # type: ignore
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2826, in _transform
+    for output in final_pipeline:
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1282, in transform
+    for ichunk in input:
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 4736, in transform
+    yield from self.bound.transform(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1300, in transform
+    yield from self.stream(final, config, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 414, in stream
+    yield self.invoke(input, config=config, stop=stop, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 276, in invoke
+    self.generate_prompt(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 633, in generate_prompt
+    return self.generate(prompt_strings, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 803, in generate
+    output = self._generate_helper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 670, in _generate_helper
+    raise e
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 657, in _generate_helper
+    self._generate(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1317, in _generate
+    self._call(prompt, stop=stop, run_manager=run_manager, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 39, in _call
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\generativeai\generative_models.py", line 262, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 812, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 29.317565775s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 29
+}
+]
+2025-12-14 14:40:30,245 - scripts.crew - ERROR - All crew execution attempts failed
+2025-12-14 14:40:30,252 - scripts.crew - WARNING - Returning fallback result due to error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 29.317565775s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 29
+}
+]
+2025-12-14 14:40:30,288 - app.core.cache - INFO - Cached result for key: 3a1a8985... (TTL: 3600s)
+2025-12-14 15:17:17,377 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-14 15:20:30,214 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-14 15:21:15,561 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-14 15:22:21,295 - crewai.cli.config - INFO - Using config path: C:\Users\oualid\.config\crewai\settings.json
+2025-12-14 15:22:37,230 - app.core.logging - INFO - Uploading file: kc_house_data.csv
+2025-12-14 15:22:39,179 - app.core.logging - INFO - File uploaded successfully: 21613 rows, 21 columns
+2025-12-14 15:22:42,645 - app.core.logging - INFO - Analyze request received - Query: ccccccccccccccccccccccccccccccccccc...
+2025-12-14 15:22:43,031 - app.core.logging - INFO - Analyzing data with validated query: ccccccccccccccccccccccccccccccccccc
+2025-12-14 15:22:43,034 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-12-14 15:22:44,159 - scripts.crew - ERROR - Analysis crew execution error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+2025-12-14 15:22:44,159 - scripts.crew - ERROR - Crew execution failed on attempt 1: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 61, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 102, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\crew.py", line 310, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\crew.py", line 392, in _run_sequential_process
+    output = task.execute(context=task_output)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\task.py", line 187, in execute
+    result = self._execute(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\task.py", line 196, in _execute
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agent.py", line 162, in execute_task
+    result = self.agent_executor.invoke(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\chains\base.py", line 163, in invoke
+    raise e
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\chains\base.py", line 153, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agents\executor.py", line 71, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 1138, in _take_next_step
+    [
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 1138, in <listcomp>
+    [
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agents\executor.py", line 135, in _iter_next_step
+    output = self.agent.plan(  # type: ignore #  Incompatible types in assignment (expression has type "AgentAction | AgentFinish | list[AgentAction]", variable has type "AgentAction")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 397, in plan
+    for chunk in self.runnable.stream(inputs, config={"callbacks": callbacks}):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2875, in stream
+    yield from self.transform(iter([input]), config, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2862, in transform
+    yield from self._transform_stream_with_config(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1881, in _transform_stream_with_config
+    chunk: Output = context.run(next, iterator)  # type: ignore
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2826, in _transform
+    for output in final_pipeline:
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1282, in transform
+    for ichunk in input:
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 4736, in transform
+    yield from self.bound.transform(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1300, in transform
+    yield from self.stream(final, config, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 414, in stream
+    yield self.invoke(input, config=config, stop=stop, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 276, in invoke
+    self.generate_prompt(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 633, in generate_prompt
+    return self.generate(prompt_strings, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 803, in generate
+    output = self._generate_helper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 670, in _generate_helper
+    raise e
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 657, in _generate_helper
+    self._generate(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1317, in _generate
+    self._call(prompt, stop=stop, run_manager=run_manager, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 39, in _call
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\generativeai\generative_models.py", line 262, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 812, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+2025-12-14 15:22:44,230 - scripts.crew - INFO - Retrying crew execution in 1 seconds...
+2025-12-14 15:22:45,233 - scripts.crew - INFO - Starting crew execution (attempt 2/3)
+2025-12-14 15:22:45,249 - opentelemetry.trace - WARNING - Overriding of current TracerProvider is not allowed
+2025-12-14 15:22:45,645 - scripts.crew - ERROR - Analysis crew execution error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+2025-12-14 15:22:45,647 - scripts.crew - ERROR - Crew execution failed on attempt 2: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 61, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 102, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\crew.py", line 310, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\crew.py", line 392, in _run_sequential_process
+    output = task.execute(context=task_output)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\task.py", line 187, in execute
+    result = self._execute(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\task.py", line 196, in _execute
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agent.py", line 162, in execute_task
+    result = self.agent_executor.invoke(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\chains\base.py", line 163, in invoke
+    raise e
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\chains\base.py", line 153, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agents\executor.py", line 71, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 1138, in _take_next_step
+    [
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 1138, in <listcomp>
+    [
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agents\executor.py", line 135, in _iter_next_step
+    output = self.agent.plan(  # type: ignore #  Incompatible types in assignment (expression has type "AgentAction | AgentFinish | list[AgentAction]", variable has type "AgentAction")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 397, in plan
+    for chunk in self.runnable.stream(inputs, config={"callbacks": callbacks}):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2875, in stream
+    yield from self.transform(iter([input]), config, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2862, in transform
+    yield from self._transform_stream_with_config(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1881, in _transform_stream_with_config
+    chunk: Output = context.run(next, iterator)  # type: ignore
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2826, in _transform
+    for output in final_pipeline:
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1282, in transform
+    for ichunk in input:
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 4736, in transform
+    yield from self.bound.transform(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1300, in transform
+    yield from self.stream(final, config, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 414, in stream
+    yield self.invoke(input, config=config, stop=stop, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 276, in invoke
+    self.generate_prompt(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 633, in generate_prompt
+    return self.generate(prompt_strings, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 803, in generate
+    output = self._generate_helper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 670, in _generate_helper
+    raise e
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 657, in _generate_helper
+    self._generate(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1317, in _generate
+    self._call(prompt, stop=stop, run_manager=run_manager, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 39, in _call
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\generativeai\generative_models.py", line 262, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 812, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+2025-12-14 15:22:45,709 - scripts.crew - INFO - Retrying crew execution in 2 seconds...
+2025-12-14 15:22:47,711 - scripts.crew - INFO - Starting crew execution (attempt 3/3)
+2025-12-14 15:22:47,718 - opentelemetry.trace - WARNING - Overriding of current TracerProvider is not allowed
+2025-12-14 15:22:47,983 - scripts.crew - ERROR - Analysis crew execution error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+2025-12-14 15:22:47,983 - scripts.crew - ERROR - Crew execution failed on attempt 3: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 29, in run
+    result = self._execute_crew()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 61, in _execute_crew
+    return self._execute_analysis_crew(agents, tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\crew.py", line 102, in _execute_analysis_crew
+    result = crew.kickoff(inputs={"query": self.query})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\crew.py", line 310, in kickoff
+    result = self._run_sequential_process()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\crew.py", line 392, in _run_sequential_process
+    output = task.execute(context=task_output)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\task.py", line 187, in execute
+    result = self._execute(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\task.py", line 196, in _execute
+    result = agent.execute_task(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agent.py", line 162, in execute_task
+    result = self.agent_executor.invoke(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\chains\base.py", line 163, in invoke
+    raise e
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\chains\base.py", line 153, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agents\executor.py", line 71, in _call
+    next_step_output = self._take_next_step(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 1138, in _take_next_step
+    [
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 1138, in <listcomp>
+    [
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\crewai\agents\executor.py", line 135, in _iter_next_step
+    output = self.agent.plan(  # type: ignore #  Incompatible types in assignment (expression has type "AgentAction | AgentFinish | list[AgentAction]", variable has type "AgentAction")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain\agents\agent.py", line 397, in plan
+    for chunk in self.runnable.stream(inputs, config={"callbacks": callbacks}):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2875, in stream
+    yield from self.transform(iter([input]), config, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2862, in transform
+    yield from self._transform_stream_with_config(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1881, in _transform_stream_with_config
+    chunk: Output = context.run(next, iterator)  # type: ignore
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 2826, in _transform
+    for output in final_pipeline:
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1282, in transform
+    for ichunk in input:
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 4736, in transform
+    yield from self.bound.transform(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\runnables\base.py", line 1300, in transform
+    yield from self.stream(final, config, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 414, in stream
+    yield self.invoke(input, config=config, stop=stop, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 276, in invoke
+    self.generate_prompt(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 633, in generate_prompt
+    return self.generate(prompt_strings, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 803, in generate
+    output = self._generate_helper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 670, in _generate_helper
+    raise e
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 657, in _generate_helper
+    self._generate(
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1317, in _generate
+    self._call(prompt, stop=stop, run_manager=run_manager, **kwargs)
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\scripts\agents.py", line 39, in _call
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\generativeai\generative_models.py", line 262, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 812, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+2025-12-14 15:22:48,001 - scripts.crew - ERROR - All crew execution attempts failed
+2025-12-14 15:22:48,002 - scripts.crew - WARNING - Returning fallback result due to error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+2025-12-14 15:22:48,009 - app.core.cache - INFO - Cached result for key: 3a1a8985... (TTL: 3600s)
+2025-12-14 15:32:07,889 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-14 15:41:53,774 - app.core.logging - INFO - Uploading file: kc_house_data.csv
+2025-12-14 15:41:57,165 - app.core.logging - INFO - File uploaded successfully: 21613 rows, 21 columns
+2025-12-14 15:41:57,763 - app.core.logging - INFO - Analyze request received - Query: ccccccccccccccccccccccccccccccccccc...
+2025-12-14 15:41:58,689 - app.core.logging - INFO - Analyzing data with validated query: ccccccccccccccccccccccccccccccccccc
+2025-12-14 15:41:58,722 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-12-14 15:42:01,920 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 15:42:04,892 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 15:42:06,640 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 15:42:12,419 - scripts.crew - INFO - Analysis crew executed successfully
+2025-12-14 15:42:12,420 - scripts.crew - INFO - Crew execution completed successfully
+2025-12-14 15:42:12,422 - app.core.logging - ERROR - Unexpected error during analysis: 'str' object has no attribute 'raw'
+Traceback (most recent call last):
+  File "C:\Users\oualid\Desktop\walid\data_scientist\backend\app\routers\analysis.py", line 117, in analyze_data
+    if not result or not result.raw:
+                         ^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'raw'
+2025-12-14 15:51:37,993 - app.core.cache - INFO - Initialized AnalysisCache with max_size=100, default_ttl=3600s
+2025-12-14 15:54:09,438 - app.core.logging - INFO - Uploading file: kc_house_data.csv
+2025-12-14 15:54:11,322 - app.core.logging - INFO - File uploaded successfully: 21613 rows, 21 columns
+2025-12-14 15:59:32,723 - app.core.logging - INFO - Analyze request received - Query: ccccccccccccccccccccccccccccccccccc...
+2025-12-14 15:59:33,089 - app.core.logging - INFO - Analyzing data with validated query: ccccccccccccccccccccccccccccccccccc
+2025-12-14 15:59:33,089 - scripts.crew - INFO - Starting crew execution (attempt 1/3)
+2025-12-14 15:59:45,995 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 15:59:52,029 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 15:59:54,308 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 16:00:07,130 - scripts.crew - INFO - Analysis crew executed successfully
+2025-12-14 16:00:07,130 - scripts.crew - INFO - Crew execution completed successfully
+2025-12-14 16:00:07,136 - app.core.cache - INFO - Cached result for key: 3a1a8985... (TTL: 3600s)

@@ -1,24 +1,27 @@
 import os
 from crewai import Agent
 import dotenv
+from langchain_openai import ChatOpenAI
 from scripts.custom_tools import list_tables_tool, tables_schema_tool, execute_sql_tool, check_sql_tool
-from scripts.custom_groq_llm import CustomGroqLLM
 
 # Load .env file from the backend directory (where the script expects it)
 dotenv.load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))
 
-# Load the Groq API key from environment variables
-groq_api_key = os.getenv("GROQ_API_KEY")
-if not groq_api_key:
-    raise ValueError("GROQ_API_KEY must be set in the environment variables or .env file")
+# Load the OpenRouter API key and model from environment variables
+openrouter_api_key = os.getenv("OPENROUTER_API_KEY")
+llm_model = os.getenv("LLM_MODEL", "mistralai/mistral-7b-instruct:free")
+
+if not openrouter_api_key:
+    raise ValueError("OPENROUTER_API_KEY must be set in the environment variables or .env file")
 
 class CustomAgents:
     def __init__(self):
-        # Utiliser notre classe LLM personnalisée pour Groq
-        self.llm = CustomGroqLLM(
-            model="llama-3.3-70b-versatile",  # Utiliser un modèle plus léger pour de meilleures performances
-            temperature=0.0,
-            api_key=groq_api_key
+        # Utiliser OpenRouter
+        self.llm = ChatOpenAI(
+            model=llm_model,
+            api_key=openrouter_api_key,
+            base_url="https://openrouter.ai/api/v1",
+            temperature=0.0
         )
 
     def sql_developer(self):

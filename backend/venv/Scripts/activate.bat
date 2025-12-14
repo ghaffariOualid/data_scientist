@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv
+set VIRTUAL_ENV=C:\Users\oualid\Desktop\walid\data_scientist\backend\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

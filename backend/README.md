@@ -1,6 +1,6 @@
 # Backend - AI Data Analysis API
 
-API FastAPI pour l'analyse de données avec IA utilisant CrewAI et Groq.
+API FastAPI pour l'analyse de données avec IA utilisant CrewAI et OpenRouter (par défaut `mistralai/mistral-7b-instruct:free`).
 
 ## Structure du projet
 
@@ -21,35 +21,42 @@ backend/
 │       └── analysis.py  # Endpoints pour l'analyse et visualisation
 ├── scripts/             # Scripts CrewAI (agents, tâches, etc.)
 ├── requirements.txt     # Dépendances Python
-├── test_api.py         # Tests de l'API
-└── README.md           # Cette documentation
+├── test_api.py          # Tests de l'API
+└── README.md            # Cette documentation
 ```
 
 ## Fonctionnalités
 
-- **Upload de données CSV** avec validation
-- **Analyse de données** avec IA (CrewAI + Groq)
-- **Génération de visualisations** interactives
-- **Persistance des données** dans SQLite
-- **Logging structuré** pour le debugging
-- **Configuration centralisée** via variables d'environnement
+- Upload de données CSV avec validation
+- Analyse de données via CrewAI + LLM OpenRouter
+- Visualisations générées côté IA
+- Cache d'analyses (TTL 1h) pour réduire les appels LLM
+- Persistance SQLite et logging structuré
+- Configuration centralisée via variables d'environnement
 
 ## Installation
 
-1. Créer un environnement virtuel :
+1) Créer un environnement virtuel
 ```bash
 python -m venv venv
-source venv/bin/activate  # Sur Windows: venv\Scripts\activate
+# Windows
+venv\Scripts\activate
 ```
 
-2. Installer les dépendances :
+2) Installer les dépendances
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Configurer les variables d'environnement dans `.env` :
+3) Configurer `.env` (exemple)
 ```env
-GROQ_API_KEY=your_groq_api_key
+# Clé OpenRouter obligatoire
+OPENROUTER_API_KEY=sk-or-...
+
+# Modèle par défaut
+LLM_MODEL=mistralai/mistral-7b-instruct:free
+
+# Base de données et logs
 DATABASE_URL=sqlite:///./data.db
 LOG_LEVEL=INFO
 ```
@@ -57,21 +64,21 @@ LOG_LEVEL=INFO
 ## Lancement
 
 ```bash
-python -m app.main
+uvicorn app.main:app --host 0.0.0.0 --port 8001
 ```
 
-L'API sera disponible sur `http://localhost:8000`
+L'API sera disponible sur http://localhost:8001
 
-## Endpoints
+## Endpoints principaux
 
-- `GET /` - Informations sur l'API
-- `GET /health` - Vérification de l'état
-- `POST /data/upload` - Upload d'un fichier CSV
-- `GET /data/info` - Informations sur les données chargées
-- `GET /data/download` - Téléchargement des données
-- `DELETE /data/clear` - Suppression des données
-- `POST /analysis/analyze` - Analyse des données avec IA
-- `POST /analysis/visualize` - Génération de visualisations
+- `GET /` : infos API
+- `GET /health` : statut
+- `POST /data/upload` : charger un CSV
+- `GET /data/info` : métadonnées du dataset
+- `GET /data/download` : télécharger le dataset
+- `DELETE /data/clear` : vider le dataset
+- `POST /analysis/analyze` : analyse IA (CrewAI + OpenRouter)
+- `POST /analysis/visualize` : génération de visuels
 
 ## Développement
 
@@ -83,8 +90,8 @@ python test_api.py
 
 ### Logging
 
-Les logs sont écrits dans `app.log` et affichés dans la console selon le niveau configuré.
+Niveau défini par `LOG_LEVEL`. Les événements clés sont émis par `app.core.logging` et `scripts.crew`.
 
 ### Base de données
 
-Par défaut, utilise SQLite (`data.db`). Modifiable via `DATABASE_URL`.
+SQLite par défaut (`data.db`). Changeable via `DATABASE_URL`.

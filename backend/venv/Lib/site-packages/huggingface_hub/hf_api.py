@@ -59,7 +59,7 @@ from ._commit_api import (
     _upload_files,
     _warn_on_overwriting_operations,
 )
-from ._inference_endpoints import InferenceEndpoint, InferenceEndpointType
+from ._inference_endpoints import InferenceEndpoint, InferenceEndpointScalingMetric, InferenceEndpointType
 from ._jobs_api import JobInfo, JobSpec, ScheduledJobInfo, _create_job_spec
 from ._space_api import SpaceHardware, SpaceRuntime, SpaceStorage, SpaceVariable
 from ._upload_large_folder import upload_large_folder_internal
@@ -75,6 +75,7 @@ from .errors import (
     BadRequestError,
     GatedRepoError,
     HfHubHTTPError,
+    LocalTokenNotFoundError,
     RemoteEntryNotFoundError,
     RepositoryNotFoundError,
     RevisionNotFoundError,
@@ -194,6 +195,7 @@ ExpandSpaceProperty_T = Literal[
 
 USERNAME_PLACEHOLDER = "hf_user"
 _REGEX_DISCUSSION_URL = re.compile(r".*/discussions/(\d+)$")
+_REGEX_HTTP_PROTOCOL = re.compile(r"https?://")
 
 _CREATE_COMMIT_NO_REPO_ERROR_MESSAGE = (
     "\nNote: Creating a commit assumes that the repo already exists on the"
@@ -238,28 +240,62 @@ def repo_type_and_id_from_hf_id(hf_id: str, hub_url: Optional[str] = None) -> tu
     """
     input_hf_id = hf_id
 
-    hub_url = re.sub(r"https?://", "", hub_url if hub_url is not None else constants.ENDPOINT)
-    is_hf_url = hub_url in hf_id and "@" not in hf_id
+    # Get the hub_url (with or without protocol)
+    full_hub_url = hub_url if hub_url is not None else constants.ENDPOINT
+    hub_url_without_protocol = _REGEX_HTTP_PROTOCOL.sub("", full_hub_url)
+
+    # Check if hf_id is a URL containing the hub_url (check both with and without protocol)
+    hf_id_without_protocol = _REGEX_HTTP_PROTOCOL.sub("", hf_id)
+    is_hf_url = hub_url_without_protocol in hf_id_without_protocol and "@" not in hf_id
 
     HFFS_PREFIX = "hf://"
     if hf_id.startswith(HFFS_PREFIX):  # Remove "hf://" prefix if exists
         hf_id = hf_id[len(HFFS_PREFIX) :]
+
+    # If it's a URL, strip the endpoint prefix to get the path
+    if is_hf_url:
+        # Remove protocol if present
+        hf_id_normalized = _REGEX_HTTP_PROTOCOL.sub("", hf_id)
+
+        # Remove the hub_url prefix to get the relative path
+        if hf_id_normalized.startswith(hub_url_without_protocol):
+            # Strip the hub URL and any leading slashes
+            hf_id = hf_id_normalized[len(hub_url_without_protocol) :].lstrip("/")
 
     url_segments = hf_id.split("/")
     is_hf_id = len(url_segments) <= 3
 
     namespace: Optional[str]
     if is_hf_url:
-        namespace, repo_id = url_segments[-2:]
-        if namespace == hub_url:
-            namespace = None
-        if len(url_segments) > 2 and hub_url not in url_segments[-3]:
-            repo_type = url_segments[-3]
-        elif namespace in constants.REPO_TYPES_MAPPING:
-            # Mean canonical dataset or model
-            repo_type = constants.REPO_TYPES_MAPPING[namespace]
-            namespace = None
+        # For URLs, we need to extract repo_type, namespace, repo_id
+        # Expected format after stripping endpoint: [repo_type]/namespace/repo_id or namespace/repo_id
+
+        if len(url_segments) >= 3:
+            # Check if first segment is a repo type
+            if url_segments[0] in constants.REPO_TYPES_MAPPING:
+                repo_type = constants.REPO_TYPES_MAPPING[url_segments[0]]
+                namespace = url_segments[1]
+                repo_id = url_segments[2]
+            else:
+                # First segment is namespace
+                namespace = url_segments[0]
+                repo_id = url_segments[1]
+                repo_type = None
+        elif len(url_segments) == 2:
+            namespace = url_segments[0]
+            repo_id = url_segments[1]
+
+            # Check if namespace is actually a repo type mapping
+            if namespace in constants.REPO_TYPES_MAPPING:
+                # Mean canonical dataset or model
+                repo_type = constants.REPO_TYPES_MAPPING[namespace]
+                namespace = None
+            else:
+                repo_type = None
         else:
+            # Single segment
+            repo_id = url_segments[0]
+            namespace = None
             repo_type = None
     elif is_hf_id:
         if len(url_segments) == 3:
@@ -1694,6 +1730,9 @@ class HfApi:
         self.headers = headers
         self._thread_pool: Optional[ThreadPoolExecutor] = None
 
+        # /whoami-v2 is the only endpoint for which we may want to cache results
+        self._whoami_cache: dict[str, dict] = {}
+
     def run_as_future(self, fn: Callable[..., R], *args, **kwargs) -> Future[R]:
         """
         Run a method in the background and return a Future instance.
@@ -1735,9 +1774,12 @@ class HfApi:
         return self._thread_pool.submit(fn, *args, **kwargs)
 
     @validate_hf_hub_args
-    def whoami(self, token: Union[bool, str, None] = None) -> dict:
+    def whoami(self, token: Union[bool, str, None] = None, *, cache: bool = False) -> dict:
         """
         Call HF API to know "whoami".
+
+        If passing `cache=True`, the result will be cached for subsequent calls for the duration of the Python process. This is useful if you plan to call
+        `whoami` multiple times as this endpoint is heavily rate-limited for security reasons.
 
         Args:
             token (`bool` or `str`, *optional*):
@@ -1745,12 +1787,38 @@ class HfApi:
                 token, which is the recommended method for authentication (see
                 https://huggingface.co/docs/huggingface_hub/quick-start#authentication).
                 To disable authentication, pass `False`.
+            cache (`bool`, *optional*):
+                Whether to cache the result of the `whoami` call for subsequent calls.
+                If an error occurs during the first call, it won't be cached.
+                Defaults to `False`.
         """
         # Get the effective token using the helper function get_token
-        effective_token = token or self.token or get_token() or True
+        token = self.token if token is None else token
+        if token is False:
+            raise ValueError("Cannot use `token=False` with `whoami` method as it requires authentication.")
+        if token is True or token is None:
+            token = get_token()
+        if token is None:
+            raise LocalTokenNotFoundError(
+                "Token is required to call the /whoami-v2 endpoint, but no token found. You must provide a token or be logged in to "
+                "Hugging Face with `hf auth login` or `huggingface_hub.login`. See https://huggingface.co/settings/tokens."
+            )
+
+        if cache and (cached_token := self._whoami_cache.get(token)):
+            return cached_token
+
+        # Call Hub
+        output = self._inner_whoami(token=token)
+
+        # Cache result and return
+        if cache:
+            self._whoami_cache[token] = output
+        return output
+
+    def _inner_whoami(self, token: str) -> dict:
         r = get_session().get(
             f"{self.endpoint}/api/whoami-v2",
-            headers=self._build_hf_headers(token=effective_token),
+            headers=self._build_hf_headers(token=token),
         )
         try:
             hf_raise_for_status(r)
@@ -1758,15 +1826,21 @@ class HfApi:
             if e.response.status_code == 401:
                 error_message = "Invalid user token."
                 # Check which token is the effective one and generate the error message accordingly
-                if effective_token == _get_token_from_google_colab():
+                if token == _get_token_from_google_colab():
                     error_message += " The token from Google Colab vault is invalid. Please update it from the UI."
-                elif effective_token == _get_token_from_environment():
+                elif token == _get_token_from_environment():
                     error_message += (
                         " The token from HF_TOKEN environment variable is invalid. "
                         "Note that HF_TOKEN takes precedence over `hf auth login`."
                     )
-                elif effective_token == _get_token_from_file():
+                elif token == _get_token_from_file():
                     error_message += " The token stored is invalid. Please run `hf auth login` to update it."
+                raise HfHubHTTPError(error_message, response=e.response) from e
+            if e.response.status_code == 429:
+                error_message = (
+                    "You've hit the rate limit for the /whoami-v2 endpoint, which is intentionally strict for security reasons."
+                    " If you're calling it often, consider caching the response with `whoami(..., cache=True)`."
+                )
                 raise HfHubHTTPError(error_message, response=e.response) from e
             raise
         return r.json()
@@ -5089,7 +5163,7 @@ class HfApi:
             ignore_patterns (`list[str]` or `str`, *optional*):
                 If provided, files matching any of the patterns are not uploaded.
             num_workers (`int`, *optional*):
-                Number of workers to start. Defaults to `os.cpu_count() - 2` (minimum 2).
+                Number of workers to start. Defaults to half of CPU cores (minimum 1).
                 A higher number of workers may speed up the process if your machine allows it. However, on machines with a
                 slower connection, it is recommended to keep the number of workers low to ensure better resumability.
                 Indeed, partially uploaded files will have to be completely re-uploaded if the process is interrupted.
@@ -5169,7 +5243,7 @@ class HfApi:
         *,
         url: str,
         token: Union[bool, str, None] = None,
-        timeout: Optional[float] = constants.DEFAULT_REQUEST_TIMEOUT,
+        timeout: Optional[float] = constants.HF_HUB_ETAG_TIMEOUT,
     ) -> HfFileMetadata:
         """Fetch metadata of a file versioned on the Hub for a given url.
 
@@ -7409,6 +7483,8 @@ class HfApi:
         account_id: Optional[str] = None,
         min_replica: int = 1,
         max_replica: int = 1,
+        scaling_metric: Optional[InferenceEndpointScalingMetric] = None,
+        scaling_threshold: Optional[float] = None,
         scale_to_zero_timeout: Optional[int] = None,
         revision: Optional[str] = None,
         task: Optional[str] = None,
@@ -7449,6 +7525,12 @@ class HfApi:
                 scaling to zero, set this value to 0 and adjust `scale_to_zero_timeout` accordingly. Defaults to 1.
             max_replica (`int`, *optional*):
                 The maximum number of replicas (instances) to scale to for the Inference Endpoint. Defaults to 1.
+            scaling_metric (`str` or [`InferenceEndpointScalingMetric `], *optional*):
+                The metric reference for scaling. Either "pendingRequests" or "hardwareUsage" when provided. Defaults to
+                None (meaning: let the HF Endpoints service specify the metric).
+            scaling_threshold (`float`, *optional*):
+                The scaling metric threshold used to trigger a scale up. Ignored when scaling metric is not provided.
+                Defaults to None (meaning: let the HF Endpoints service specify the threshold).
             scale_to_zero_timeout (`int`, *optional*):
                 The duration in minutes before an inactive endpoint is scaled to zero, or no scaling to zero if
                 set to None and `min_replica` is not 0. Defaults to None.
@@ -7600,6 +7682,8 @@ class HfApi:
             },
             "type": type,
         }
+        if scaling_metric:
+            payload["compute"]["scaling"]["measure"] = {scaling_metric: scaling_threshold}  # type: ignore
         if env:
             payload["model"]["env"] = env
         if secrets:
@@ -7764,6 +7848,8 @@ class HfApi:
         min_replica: Optional[int] = None,
         max_replica: Optional[int] = None,
         scale_to_zero_timeout: Optional[int] = None,
+        scaling_metric: Optional[InferenceEndpointScalingMetric] = None,
+        scaling_threshold: Optional[float] = None,
         # Model update
         repository: Optional[str] = None,
         framework: Optional[str] = None,
@@ -7804,7 +7890,12 @@ class HfApi:
                 The maximum number of replicas (instances) to scale to for the Inference Endpoint.
             scale_to_zero_timeout (`int`, *optional*):
                 The duration in minutes before an inactive endpoint is scaled to zero.
-
+            scaling_metric (`str` or [`InferenceEndpointScalingMetric `], *optional*):
+                The metric reference for scaling. Either "pendingRequests" or "hardwareUsage" when provided.
+                Defaults to None.
+            scaling_threshold (`float`, *optional*):
+                The scaling metric threshold used to trigger a scale up. Ignored when scaling metric is not provided.
+                Defaults to None.
             repository (`str`, *optional*):
                 The name of the model repository associated with the Inference Endpoint (e.g. `"gpt2"`).
             framework (`str`, *optional*):
@@ -7858,6 +7949,8 @@ class HfApi:
             payload["compute"]["scaling"]["minReplica"] = min_replica
         if scale_to_zero_timeout is not None:
             payload["compute"]["scaling"]["scaleToZeroTimeout"] = scale_to_zero_timeout
+        if scaling_metric:
+            payload["compute"]["scaling"]["measure"] = {scaling_metric: scaling_threshold}
         if repository is not None:
             payload["model"]["repository"] = repository
         if framework is not None:
@@ -9792,6 +9885,75 @@ class HfApi:
         hf_raise_for_status(r)
         return PaperInfo(**r.json())
 
+    def list_daily_papers(
+        self,
+        *,
+        date: Optional[str] = None,
+        token: Union[bool, str, None] = None,
+        week: Optional[str] = None,
+        month: Optional[str] = None,
+        submitter: Optional[str] = None,
+        sort: Optional[Literal["publishedAt", "trending"]] = None,
+        p: Optional[int] = None,
+        limit: Optional[int] = None,
+    ) -> Iterable[PaperInfo]:
+        """
+        List the daily papers published on a given date on the Hugging Face Hub.
+
+        Args:
+            date (`str`, *optional*):
+                Date in ISO format (YYYY-MM-DD) for which to fetch daily papers.
+                Defaults to most recent ones.
+            token (Union[bool, str, None], *optional*):
+                A valid user access token (string). Defaults to the locally saved
+                token. To disable authentication, pass `False`.
+            week (`str`, *optional*):
+                Week in ISO format (YYYY-Www) for which to fetch daily papers. Example, `2025-W09`.
+            month (`str`, *optional*):
+                Month in ISO format (YYYY-MM) for which to fetch daily papers. Example, `2025-02`.
+            submitter (`str`, *optional*):
+                Username of the submitter to filter daily papers.
+            sort (`Literal["publishedAt", "trending"]`, *optional*):
+                Sort order for the daily papers. Can be either by `publishedAt` or by `trending`.
+                Defaults to `"publishedAt"`
+            p (`int`, *optional*):
+                Page number for pagination. Defaults to 0.
+            limit (`int`, *optional*):
+                Limit of papers to fetch. Defaults to 50.
+
+        Returns:
+            `Iterable[PaperInfo]`: an iterable of [`huggingface_hub.hf_api.PaperInfo`] objects.
+
+        Example:
+
+        ```python
+        >>> from huggingface_hub import HfApi
+
+        >>> api = HfApi()
+        >>> list(api.list_daily_papers(date="2025-10-29"))
+        ```
+        """
+        path = f"{self.endpoint}/api/daily_papers"
+
+        params = {
+            k: v
+            for k, v in {
+                "p": p,
+                "limit": limit,
+                "sort": sort,
+                "date": date,
+                "week": week,
+                "month": month,
+                "submitter": submitter,
+            }.items()
+            if v is not None
+        }
+
+        r = get_session().get(path, params=params, headers=self._build_hf_headers(token=token))
+        hf_raise_for_status(r)
+        for paper in r.json():
+            yield PaperInfo(**paper)
+
     def auth_check(
         self, repo_id: str, *, repo_type: Optional[str] = None, token: Union[bool, str, None] = None
     ) -> None:
@@ -10813,6 +10975,7 @@ space_info = api.space_info
 
 list_papers = api.list_papers
 paper_info = api.paper_info
+list_daily_papers = api.list_daily_papers
 
 repo_exists = api.repo_exists
 revision_exists = api.revision_exists

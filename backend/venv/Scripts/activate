@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="c:\Users\oualid\Desktop\walid\ENIAD\S4\Ingénierie_de l’intelligence artificielle\Knew\backend\venv"
+VIRTUAL_ENV="C:\Users\oualid\Desktop\walid\data_scientist\backend\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -114,11 +114,15 @@ async def analyze_data(request: AnalysisRequest, db: Session = Depends(get_db)):
         custom_crew = CustomCrew(sanitized_query, df=df)
         result = custom_crew.run()
 
-        if not result or not result.raw:
+        if not result:
             logger.warning("Analysis returned empty result")
             raise HTTPException(status_code=500, detail="L'analyse n'a produit aucun résultat")
 
-        analysis_text = result.raw or str(result)
+        # Handle both string and object results
+        if isinstance(result, str):
+            analysis_text = result
+        else:
+            analysis_text = getattr(result, 'raw', None) or str(result)
 
         validator = ResultValidator()
         validation = validator.validate_analysis_result(analysis_text, sanitized_query)

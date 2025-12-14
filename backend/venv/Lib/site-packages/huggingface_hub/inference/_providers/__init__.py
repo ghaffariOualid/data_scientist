@@ -40,7 +40,13 @@ from .nscale import NscaleConversationalTask, NscaleTextToImageTask
 from .openai import OpenAIConversationalTask
 from .ovhcloud import OVHcloudConversationalTask
 from .publicai import PublicAIConversationalTask
-from .replicate import ReplicateImageToImageTask, ReplicateTask, ReplicateTextToImageTask, ReplicateTextToSpeechTask
+from .replicate import (
+    ReplicateAutomaticSpeechRecognitionTask,
+    ReplicateImageToImageTask,
+    ReplicateTask,
+    ReplicateTextToImageTask,
+    ReplicateTextToSpeechTask,
+)
 from .sambanova import SambanovaConversationalTask, SambanovaFeatureExtractionTask
 from .scaleway import ScalewayConversationalTask, ScalewayFeatureExtractionTask
 from .together import TogetherConversationalTask, TogetherTextGenerationTask, TogetherTextToImageTask
@@ -175,6 +181,7 @@ PROVIDERS: dict[PROVIDER_T, dict[str, TaskProviderHelper]] = {
         "conversational": PublicAIConversationalTask(),
     },
     "replicate": {
+        "automatic-speech-recognition": ReplicateAutomaticSpeechRecognitionTask(),
         "image-to-image": ReplicateImageToImageTask(),
         "text-to-image": ReplicateTextToImageTask(),
         "text-to-speech": ReplicateTextToSpeechTask(),

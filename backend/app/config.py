@@ -24,7 +24,8 @@ class Settings(BaseSettings):
     log_level: str = Field(default="INFO", env="LOG_LEVEL")
 
     # AI settings (from env)
-    groq_api_key: Optional[str] = Field(default=None, env="GROQ_API_KEY")
+    openrouter_api_key: Optional[str] = Field(default=None, env="OPENROUTER_API_KEY")
+    llm_model: str = Field(default="mistralai/mistral-7b-instruct:free", env="LLM_MODEL")
 
     # CrewAI settings
     crewai_tracing_enabled: bool = Field(default=False, env="CREWAI_TRACING_ENABLED")

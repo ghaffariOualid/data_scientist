@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dll
+
+# Virtual environments
+venv/
+.env
+.env.*
+
+# VS Code / IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Data & logs
+*.db
+data.db
+*.sqlite
+*.log
+logs/
+
+# Caches
+*.egg-info/
+.dist-info/
+.pytest_cache/
+.mypy_cache/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,8 +1,10 @@
 streamlit
 pandas
 python-dotenv
-crewai
+crewai==0.35.0
 langchain
+langchain_openai
+langchain-google-genai
 langchain-community
 statsmodels
 plotly

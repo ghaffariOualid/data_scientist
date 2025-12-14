@@ -1,8 +1,7 @@
 import sqlite3
-from crewai.tools import tool
+from langchain.tools import tool
 import os
 import dotenv
-from scripts.custom_groq_llm import CustomGroqLLM
 from langchain_community.utilities.sql_database import SQLDatabase
 from langchain_community.tools.sql_database.tool import (
     InfoSQLDatabaseTool,
