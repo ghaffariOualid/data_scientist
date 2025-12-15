@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: data-scientist-backend
+    ports:
+      - "8001:8001"
+    environment:
+      # OpenRouter configuration
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+      LLM_MODEL: ${LLM_MODEL:-mistralai/mistral-7b-instruct:free}
+      
+      # Database
+      DATABASE_URL: sqlite:///./data.db
+      
+      # Logging
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      
+      # CrewAI
+      CREWAI_TRACING_ENABLED: ${CREWAI_TRACING_ENABLED:-false}
+    
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/logs:/app/logs
+    
+    restart: unless-stopped
+    
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  frontend:
+    build: ./frontend
+    container_name: data-scientist-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_URL: http://backend:8001
+    depends_on:
+      - backend
+    restart: unless-stopped

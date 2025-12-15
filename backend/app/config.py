@@ -11,8 +11,8 @@ class Settings(BaseSettings):
     description: str = "API pour l'analyse de données avec IA utilisant CrewAI et Groq"
 
     # Server settings
-    host: str = "127.0.0.1"
-    port: int = 3001
+    host: str = "0.0.0.0"
+    port: int = 8001
 
     # Database settings
     database_url: str = Field(default="sqlite:///./data.db", env="DATABASE_URL")

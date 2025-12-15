@@ -21,7 +21,7 @@ class CustomAgents:
             model=llm_model,
             api_key=openrouter_api_key,
             base_url="https://openrouter.ai/api/v1",
-            temperature=0.0
+            temperature=0.3
         )
 
     def sql_developer(self):

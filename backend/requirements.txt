@@ -1,23 +1,25 @@
-streamlit
-pandas
-python-dotenv
+# Core API
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+pydantic-settings==2.1.0
+
+# AI & Agents
 crewai==0.35.0
-langchain
-langchain_openai
-langchain-google-genai
-langchain-community
-statsmodels
-plotly
-requests
-# For workflow diagram and GIF creation
-pillow
-imageio
-matplotlib
-numpy
-# FastAPI dependencies
-fastapi
-uvicorn[standard]
-python-multipart
-# Additional dependencies for improved backend
-pydantic-settings
-sqlalchemy
+langchain==0.1.10
+langchain_openai==0.1.7
+langchain-community==0.0.25
+
+# Database & Storage
+sqlalchemy==2.0.30
+
+# Data Processing
+pandas==2.1.3
+numpy==1.24.3
+
+# Utilities
+python-dotenv==1.0.0
+requests==2.31.0
+
+# Visualization
+plotly==5.18.0

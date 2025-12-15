@@ -4,6 +4,7 @@ import pandas as pd
 import io
 from typing import List
 from sqlalchemy.orm import Session
+from sqlalchemy import inspect
 from ..database import get_db
 from ..models import UploadResponse, DataInfo
 from ..core.logging import logger
@@ -67,11 +68,29 @@ async def get_data_info(db: Session = Depends(get_db)):
     Obtenir des informations sur les données actuelles
     """
     try:
+        # Vérifier si la table existe
+        inspector = inspect(db.bind)
+        tables = inspector.get_table_names()
+        
+        if 'uploaded_data' not in tables:
+            # La table n'existe pas, retourner des données vides
+            return DataInfo(
+                rows=0,
+                columns=[],
+                data_types={},
+                preview=[]
+            )
+        
         # Récupérer les données de la DB
         df = pd.read_sql("SELECT * FROM uploaded_data", con=db.bind)
 
         if df.empty:
-            raise HTTPException(status_code=404, detail="Aucune donnée chargée. Veuillez d'abord uploader un fichier CSV.")
+            return DataInfo(
+                rows=0,
+                columns=[],
+                data_types={},
+                preview=[]
+            )
 
         return DataInfo(
             rows=len(df),
