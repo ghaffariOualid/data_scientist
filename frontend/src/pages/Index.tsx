@@ -1,20 +1,17 @@
-import { useState } from "react";
 import { FileUpload } from "@/components/FileUpload";
 import { DataDashboard } from "@/components/DataDashboard";
 import { Layout } from "@/components/Layout";
+import { useData } from "@/context/DataContext";
 
 const Index = () => {
-  const [data, setData] = useState<any[] | null>(null);
-  const [headers, setHeaders] = useState<string[]>([]);
+  const { data, headers, setData, clearData } = useData();
 
   const handleDataLoaded = (loadedData: any[], loadedHeaders: string[]) => {
-    setData(loadedData);
-    setHeaders(loadedHeaders);
+    setData(loadedData, loadedHeaders);
   };
 
   const handleReset = () => {
-    setData(null);
-    setHeaders([]);
+    clearData();
   };
 
   return (

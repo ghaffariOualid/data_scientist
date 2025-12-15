@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { BarChart3, LineChart, PieChart, Table, Cloud, CheckCircle2, AlertCircle, FileText, TrendingUp, MessageSquare, X } from "lucide-react";
+import { Table, Cloud, CheckCircle2, AlertCircle, FileText, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DataTable } from "./DataTable";
-import { DataVisualizations } from "./DataVisualizations";
 import { AIChat } from "./AIChat";
-import { ReportGenerator } from "./ReportGenerator";
 import { ApiService } from "@/services/api";
 
 interface DataDashboardProps {
@@ -16,7 +13,6 @@ interface DataDashboardProps {
 }
 
 export const DataDashboard = ({ data, headers, onReset }: DataDashboardProps) => {
-  const [activeTab, setActiveTab] = useState("table");
   const [backendStatus, setBackendStatus] = useState<'checking' | 'connected' | 'disconnected'>('checking');
 
   useEffect(() => {
@@ -115,59 +111,10 @@ export const DataDashboard = ({ data, headers, onReset }: DataDashboardProps) =>
         <div className="grid grid-cols-1 gap-6">
           {/* Data Display */}
           <div className="space-y-6">
-            <Card className="p-1 shadow-elegant border-white/10 bg-background/40 backdrop-blur-xl overflow-hidden">
-              <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-                <div className="px-6 pt-6">
-                  <TabsList className="grid w-full grid-cols-5 mb-8 bg-background/50 p-1.5 backdrop-blur-md border border-white/10 rounded-xl h-auto">
-                    <TabsTrigger value="table" className="gap-2 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 rounded-lg" title="Voir les données brutes">
-                      <Table className="w-4 h-4" />
-                      📊 Données
-                    </TabsTrigger>
-                    <TabsTrigger value="charts" className="gap-2 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 rounded-lg" title="Graphiques en barres">
-                      <BarChart3 className="w-4 h-4" />
-                      📈 Barres
-                    </TabsTrigger>
-                    <TabsTrigger value="trends" className="gap-2 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 rounded-lg" title="Évolution dans le temps">
-                      <LineChart className="w-4 h-4" />
-                      📉 Tendances
-                    </TabsTrigger>
-                    <TabsTrigger value="distribution" className="gap-2 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 rounded-lg" title="Répartition des valeurs">
-                      <PieChart className="w-4 h-4" />
-                      🥧 Distribution
-                    </TabsTrigger>
-                    <TabsTrigger value="reports" className="gap-2 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300 rounded-lg" title="Générer des rapports IA">
-                      <FileText className="w-4 h-4" />
-                      📋 Rapports
-                    </TabsTrigger>
-                  </TabsList>
-                </div>
-
-                <div className="p-6 bg-background/20">
-
-                  <TabsContent value="table" className="mt-0">
-                    <DataTable data={data} headers={headers} />
-                  </TabsContent>
-
-                  <TabsContent value="charts" className="mt-0">
-                    <DataVisualizations data={data} headers={headers} type="bar" />
-                  </TabsContent>
-
-                  <TabsContent value="trends" className="mt-0">
-                    <DataVisualizations data={data} headers={headers} type="line" />
-                  </TabsContent>
-
-                  <TabsContent value="distribution" className="mt-0">
-                    <DataVisualizations data={data} headers={headers} type="pie" />
-                  </TabsContent>
-
-                  <TabsContent value="reports" className="mt-0">
-                    <ReportGenerator data={data} headers={headers} />
-                  </TabsContent>
-                </div>
-              </Tabs>
+            <Card className="p-6 shadow-elegant border-white/10 bg-background/40 backdrop-blur-xl overflow-hidden">
+              <DataTable data={data} headers={headers} />
             </Card>
           </div>
-
         </div>
       </div>
 
