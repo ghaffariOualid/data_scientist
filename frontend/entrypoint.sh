@@ -11,8 +11,10 @@
 # exec serve -s dist -l 5173
 
 #!/bin/sh
-# Remplacer localhost par l'IP réelle dans TOUS les fichiers .js et .html
-find dist -type f -name "*.js" -o -name "*.html" | xargs sed -i "s|http://localhost:8001|${VITE_API_URL:-http://localhost:8001}|g"
+echo "Remplacement de localhost par $VITE_API_URL..."
 
-# Lancer le serveur
+# On cherche dans tous les fichiers du dossier dist
+find /app/dist -type f -exec sed -i "s|http://localhost:8001|$VITE_API_URL|g" {} +
+
+echo "Lancement du serveur..."
 exec serve -s dist -l 5173
